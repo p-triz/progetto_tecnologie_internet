@@ -19,3 +19,4 @@ STRUTTURA SITO:
     -pagina di selezione videogioco.
         dopo selezione:
         -esecuzione videogioco con comunicazione del punteggio al server alla fine di ogni partita.
+
