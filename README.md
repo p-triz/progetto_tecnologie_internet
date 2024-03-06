@@ -1,9 +1,11 @@
 # progetto_tecnologie_internet
 CLIENT:
+
 -inviare il pacchetto di login del tipo (nome utente + hash della password);
 
 -eseguire il codice del gioco scelto che è stato fornito dal server.
 SERVER:
+
 -gestire un database che colleghi gli account dei giocatori ai punteggi da loro accumulati nei differenti videogiochi;
 
 -fornire le pagine al client una volta richieste.
