@@ -54,4 +54,9 @@ PAGINA GIOCO
 1) DB per gli account (nome hash->password)
 2) DB GIOCO 1 (nome punteggio data)
 3) DB PER GIOCO 2 (nome punteggio data)
-  
+
+
+--TECNOLOGIE--
+
+front: react
+back: flask
