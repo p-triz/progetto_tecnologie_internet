@@ -1,0 +1,10 @@
+le card dei giochi sono component (cambi immagine e descrizione del gioco tramite i props)
+
+il singolo gioco è una pagina apposita (gestita in maniera individuale probabilmente)
+
+nome utente e password da inserire sono componente,( poi passi la descrizione (se iscrizione o se login) come Child o come props -> poi sarà diversificata la comunicazione passata al backend a seconda del tipo di operazione che si vuole compiere)
+
+classifica è un componente (a cui passi i paramtri come porps ricevuti dal backend)
+
+probabilemnte puoi fare una sorta di footer con le creadenziali di login (mostra nome utente tipo) -> fatta in alto e non in basso e con opzione di logout che ti riporta a posizione iniziale
+
