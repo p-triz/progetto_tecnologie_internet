@@ -1,0 +1,30 @@
+  
+  .scoreboardTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .scoreboardList {
+    padding-left: 0;
+    text-align: center;
+    list-style: none;
+  }
+  
+  .scoreboardList li {
+    padding: 0.5rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+
+
+  .scoreboard {
+    width: 18rem;
+    margin: 1rem;
+    background-color: green;
+    
+  }
+  
+  
