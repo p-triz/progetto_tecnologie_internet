@@ -1,7 +1,12 @@
 
-const Login = () => {
+
+const Login = ({isLogged, onClick}) => {
+
   return (
-    <div>Login</div>
+    <div>
+      Login
+      <button onClick ={onClick}></button>
+    </div>
   )
 }
 
