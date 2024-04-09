@@ -5,7 +5,7 @@ const Login = ({isLogged, onClick}) => {
   return (
     <div>
       Login
-      <button onClick ={onClick}></button>
+      <button onClick ={onClick}> Login </button>
     </div>
   )
 }
