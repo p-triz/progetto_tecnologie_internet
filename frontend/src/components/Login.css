@@ -1,0 +1,40 @@
+.loginDiv {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #9b967c;
+    border-radius: 5px;
+    background-color: #927272;
+}
+
+.loginDiv form{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #4f3030;
+}
+
+.loginDiv label {
+    font-weight: bold;   
+}
+
+.loginDiv button{
+    background-color: #dabc9eb4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginDiv button:hover{
+    background-color:  #dabc9ee3;
+}
