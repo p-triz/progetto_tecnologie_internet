@@ -11,11 +11,15 @@ const App = () => {
 
 
   return (
+    <div className="parentDiv">
     <div className="container">
-      <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
       <Card imageSrc={imageSrc} description={description}  />
+      <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
+    </div>
+    <div className="container">
       <Card imageSrc={imageSrc} description={description2} />
       <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
+    </div>
     </div>
   );
 };

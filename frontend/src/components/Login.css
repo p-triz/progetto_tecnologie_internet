@@ -2,9 +2,15 @@
     width: 300px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #9b967c;
+    border: 5px solid #9b967c;
     border-radius: 5px;
     background-color: #927272;
+}
+
+.loginDiv h2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .loginDiv form{
@@ -27,7 +33,9 @@
 
 .loginDiv button{
     background-color: #dabc9eb4;
-    color: white;
+    color: rgb(101, 64, 64);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
