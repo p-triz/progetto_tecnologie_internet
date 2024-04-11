@@ -1,10 +1,15 @@
 .parentDiv{
   display: flex;
+  justify-content: center;
+}
+
+.displayDiv{
+  display: flex;
   flex-direction: row;
 }
 
 
-.container {
+.itemsDiv {
   display: flex;
   justify-content: center;
   align-items: center;

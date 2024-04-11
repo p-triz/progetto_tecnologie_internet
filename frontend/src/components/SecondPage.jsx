@@ -25,12 +25,16 @@ const SecondPage = () => {
       {showSnakeGame? (
         <SnakeGame />
       ) : (
-        <>
-          <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
-          <Card imageSrc={imageSrc} description={description} onClick={handleCardClick} />
-          <Card imageSrc={imageSrc} description={description2} />
-          <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
-        </>
+          <div className='displayDiv'>
+            <div className='itemsDiv'>
+              <Card imageSrc={imageSrc} description={description} onClick={handleCardClick} />
+              <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
+            </div>
+            <div className='itemsDiv'>
+              <Card imageSrc={imageSrc} description={description2} />
+              <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
+            </div>
+          </div>
       )}
     </div>
     </div>
