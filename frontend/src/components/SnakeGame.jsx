@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+
+import{ useState, useEffect, useRef } from 'react';
 import './SnakeGame.css';
 
-const SnakeGame = () => {
+const SnakeGame = ({ setShowSnakeGame }) => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [direction, setDirection] = useState('right');
   const [apple, setApple] = useState({ x: 5, y: 5 });
@@ -133,6 +135,19 @@ const SnakeGame = () => {
     };
   }, [snake, direction, gameOver, apple, score, draw, move]); // Added score and gameOver to the dependency array
 
+  // eslint-disable-next-line no-unused-vars
+  const handleGameOver = () => {
+    setGameOver(true);
+  };
+
+  const handlePlayAgain = () => {
+    setSnake([{ x: 10, y: 10 }]);
+    setDirection('right');
+    setApple({ x: 5, y: 5 });
+    setScore(0);
+    setGameOver(false);
+  };
+
   return (
     <div>
       <h1 className='titleSnake'>Snake Game</h1>
@@ -143,8 +158,8 @@ const SnakeGame = () => {
           {gameOver && (
             <div>
               <h3>Game Over! Your Score: {score}</h3>
-              <button onClick={() => { setSnake([{ x: 10, y: 10 }]); setDirection('right'); setApple({ x: 5, y: 5 }); setScore(0); setGameOver(false); }}>Play Again</button>
-              <button onClick={() => window.location.href = '/SecondPage.jsx'}>Go to Second Page</button>
+              <button onClick={handlePlayAgain}>Play Again</button>
+              <button onClick={() => setShowSnakeGame(false)}>Go back</button>
             </div>
           )}
         </div>
