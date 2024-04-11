@@ -135,8 +135,8 @@ const SnakeGame = () => {
 
   return (
     <div>
-      <h1>Snake Game</h1>
-      <div style={{ position: 'relative', width: '400px', height: '400px' }}>
+      <h1 className='titleSnake'>Snake Game</h1>
+      <div style={{ position: 'relative', width: '500px', height: '500px' }}>
         <canvas ref={canvasRef} id="snake-canvas"></canvas>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
           <h2>Score: {score}</h2>
