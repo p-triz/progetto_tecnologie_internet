@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./Login.css"
 
 const Login = ({isLogged, onClick}) => {
