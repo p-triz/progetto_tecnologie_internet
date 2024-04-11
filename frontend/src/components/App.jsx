@@ -9,7 +9,6 @@ const App = () => {
 
     function eventHandler() {
       setCount(true);
-      console.log(isLogged);
     }
   return (
     <div>

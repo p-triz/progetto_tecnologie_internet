@@ -1,0 +1,13 @@
+#snake-canvas {
+    border: 3px solid white;
+    border-radius: 2%;
+
+  }
+  
+  button {
+    margin: 10px;
+  }
+
+  .titleSnake{
+    text-align: center;
+  }
