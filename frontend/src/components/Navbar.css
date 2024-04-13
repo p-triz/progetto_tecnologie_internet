@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #927272;
+  padding: 5px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.left-section {
+  display: flex;
+  text-align: center;
+
+}
+
+.player-name {
+  margin-right: 20px;
+}
+
+.scoreboard-buttons {
+  display: flex;
+  flex-direction: row; /* Added this line */
+}
+
+.scoreboard-button {
+  margin-right: 10px;
+}
+
+.logout-button {
+  margin-left: auto;
+}
+
+.sectionScorebord{
+  flex-direction: row;
+}
+
+.buttonLogOut{
+  border-radius: 14%;
+  background-color: #4f3030;
+}
+
+.game1Button, .game2Button {
+  background-color: #4f3030;
+}

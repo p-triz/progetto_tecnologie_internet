@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+/* eslint-disable react/prop-types */
 import './Card.css';
 
 const Card = ({ imageSrc, description, onClick }) => {
@@ -12,10 +12,5 @@ const Card = ({ imageSrc, description, onClick }) => {
   );
 };
 
-Card.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
 
 export default Card;
