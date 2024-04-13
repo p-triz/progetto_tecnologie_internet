@@ -3,6 +3,7 @@ import Card from './Card';
 import Scoreboard from './Scoreboard';
 import SnakeGame from './SnakeGame';
 import './SecondPage.css';
+import Navbar from './Navbar';
 
 const SecondPage = () => {
   const imageSrc1 = '/images/snake.png';
@@ -24,10 +25,14 @@ const SecondPage = () => {
     <div className="parentDiv">
       <div className="container">
         {showSnakeGame? (
-          <SnakeGame setShowSnakeGame={setShowSnakeGame} />
+
+            <SnakeGame setShowSnakeGame={setShowSnakeGame} />          
         ) : (
           <div className='displayDiv'>
+            <Navbar></Navbar>
             <div className='itemsDiv'>
+              <Card imageSrc={imageSrc1} description={description} onClick={handleCardClick} />
+                <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
               <Card imageSrc={imageSrc1} gameName={gameOneName} description={description} onClick={handleCardClick} />
               <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
             </div>

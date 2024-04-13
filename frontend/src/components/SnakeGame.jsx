@@ -149,7 +149,7 @@ const SnakeGame = ({ setShowSnakeGame }) => {
   };
 
   return (
-    <div>
+    <div>   
       <h1 className='titleSnake'>Snake Game</h1>
       <div style={{ position: 'relative', width: '500px', height: '500px' }}>
         <canvas ref={canvasRef} id="snake-canvas"></canvas>
@@ -164,7 +164,9 @@ const SnakeGame = ({ setShowSnakeGame }) => {
           )}
         </div>
       </div>
+     
     </div>
+
   );
 };
 
