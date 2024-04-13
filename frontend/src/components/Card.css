@@ -1,22 +1,50 @@
 .card {
     width: 18rem;
+    height: 20rem;
     margin: 1rem;
     background-color: #4f3030;
     border: 5px solid #9b967c;
+    border-radius: 10%;
+    cursor: pointer;
+    padding: 1rem;
+    transition: all 0.3s;
+  }
+
+  .card:hover{
+    width: 20rem;
+    height: 22rem;
+    background-color: #694040;
+    border: 3px solid #9b967c;
+    padding: 0.5rem;
+    margin: 2rem;
   }
   
   .card-img-top {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 10%;
   }
   
+  .gameTitle{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: #825959;
+    border: 3px solid #9b967c;
+  }
+
   .card-body {
     padding: 0.75rem;
   }
   
   .card-text {
-    font-size: 0.875rem;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.5;
+    background-color: #825959;
     text-align: center;
+    margin: px;
+    border: 1px solid #9b967c
   }

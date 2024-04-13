@@ -28,11 +28,11 @@ const SecondPage = () => {
         ) : (
           <div className='displayDiv'>
             <div className='itemsDiv'>
-              <Card imageSrc={imageSrc1} description={description} onClick={handleCardClick} />
+              <Card imageSrc={imageSrc1} gameName={gameOneName} description={description} onClick={handleCardClick} />
               <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
             </div>
             <div className='itemsDiv'>
-              <Card imageSrc={imageSrc} description={description2} />
+              <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2} />
               <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
             </div>
           </div>
