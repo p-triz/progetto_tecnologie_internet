@@ -31,8 +31,6 @@ const SecondPage = () => {
           <div className='displayDiv'>
             <Navbar></Navbar>
             <div className='itemsDiv'>
-              <Card imageSrc={imageSrc1} description={description} onClick={handleCardClick} />
-                <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
               <Card imageSrc={imageSrc1} gameName={gameOneName} description={description} onClick={handleCardClick} />
               <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
             </div>
