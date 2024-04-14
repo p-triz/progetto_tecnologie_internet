@@ -16,7 +16,7 @@
   .scoreboardList li {
     padding: 1rem;
     background-color: #825959;
-    border: 1px solid #9b967c;
+    border: 1px solid;
   }
 
 

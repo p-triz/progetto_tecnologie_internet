@@ -18,8 +18,8 @@
 
 }
 
-.player-name {
-  margin-right: 20px;
+.playerName {
+  margin: 20px;
 }
 
 .scoreboard-buttons {
@@ -40,10 +40,33 @@
 }
 
 .buttonLogOut{
-  border-radius: 14%;
+  border-radius: 25px;
   background-color: #4f3030;
+  border: 3px solid;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.game1Button, .game2Button {
+.buttonLogOut:hover{
+  background-color: #694040;
+  border: 2px solid;
+  padding: 15px;
+}
+
+.gameButton {
   background-color: #4f3030;
+  border: 3px solid;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.gameButton:hover{
+  background-color: #694040;
+  padding: 15px;
+  border: 2px solid;
+
 }

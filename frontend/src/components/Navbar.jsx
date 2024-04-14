@@ -20,11 +20,11 @@ const Navbar = () => {
     <div className="navbar">
       <div className="left-section">
         <div className="SectionPlayerName">
-            <p>Player 1</p>
+            <p className="playerName">Player 1</p>
         </div>
         <div className="scoreboard-buttons">
-            <button className="scoreboard-button game1Button" onClick={handleGame(1)}>Scoreboard Snake</button>
-            <button className="scoreboard-button game2Button" onClick={handleGame(2)}>Scoreboard Second</button>
+            <button className="scoreboard-button gameButton" onClick={handleGame(1)}>Scoreboard Snake</button>
+            <button className="scoreboard-button gameButton" onClick={handleGame(2)}>Scoreboard Second</button>
         </div>
       </div>
       <div className="rightSection">

@@ -2,12 +2,13 @@
     width: 18rem;
     height: 20rem;
     margin: 1rem;
+    margin-top: 3rem;
     background-color: #4f3030;
     border: 5px solid #9b967c;
-    border-radius: 10%;
+    border-radius: 25px;
     cursor: pointer;
     padding: 1rem;
-    transition: all 0.3s;
+    transition: all 0.5s;
   }
 
   .card:hover{
@@ -25,7 +26,7 @@
     display: flex;
     justify-content: center;
     border: 2px solid white;
-    border-radius: 10%;
+    border-radius: 25px;
   }
   
   .gameTitle{
@@ -33,7 +34,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     background-color: #825959;
-    border: 3px solid #9b967c;
+    border: 3px solid;
   }
 
   .card-body {
@@ -46,5 +47,5 @@
     background-color: #825959;
     text-align: center;
     margin: px;
-    border: 1px solid #9b967c
+    border: 1px solid;
   }
