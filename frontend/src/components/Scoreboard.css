@@ -2,7 +2,10 @@
   .scoreboardTitle {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    background-color: #825959;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 10px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
@@ -15,8 +18,9 @@
   
   .scoreboardList li {
     padding: 1rem;
-    background-color: #825959;
+    background-color:  #dabc9eb4;
     border: 1px solid;
+    border-radius: 2px;
   }
 
 
@@ -25,8 +29,9 @@
     width: 16rem;
     margin: 0rem;
     padding: 1rem;
-    background-color: #927272;
+    background-color: #4f3030;
     border: 5px solid #9b967c;
+    border-radius: 2px;
   }
   
   

@@ -35,6 +35,7 @@
     font-weight: bold;
     background-color: #825959;
     border: 3px solid;
+    border-radius: 10px;
   }
 
   .card-body {
@@ -44,8 +45,9 @@
   .card-text {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.5;
-    background-color: #825959;
+    background-color:  #dabc9eb4;
     text-align: center;
     margin: px;
     border: 1px solid;
+    border-radius: 2px;
   }
