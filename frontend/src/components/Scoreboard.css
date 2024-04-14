@@ -1,8 +1,16 @@
-  
+  .scoreboard {
+    width: 16rem;
+    margin: 0rem;
+    padding: 1rem;
+    background-color: #6c3e3e;
+    border: 5px solid #9b967c;
+    border-radius: 2px;
+  }
+
   .scoreboardTitle {
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: #825959;
+    background-color: #5c4b42;
     border: 3px solid;
     border-radius: 10px;
     margin: 10px;
@@ -20,17 +28,6 @@
     padding: 1rem;
     background-color:  #dabc9eb4;
     border: 1px solid;
-    border-radius: 2px;
-  }
-
-
-
-  .scoreboard {
-    width: 16rem;
-    margin: 0rem;
-    padding: 1rem;
-    background-color: #4f3030;
-    border: 5px solid #9b967c;
     border-radius: 2px;
   }
   

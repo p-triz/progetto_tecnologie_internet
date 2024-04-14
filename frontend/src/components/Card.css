@@ -3,7 +3,7 @@
     height: 20rem;
     margin: 1rem;
     margin-top: 3rem;
-    background-color: #4f3030;
+    background-color: #6c3e3e;
     border: 5px solid #9b967c;
     border-radius: 25px;
     cursor: pointer;
@@ -14,7 +14,7 @@
   .card:hover{
     width: 20rem;
     height: 22rem;
-    background-color: #694040;
+    background-color: #804e4e;
     border: 3px solid #9b967c;
     padding: 0.5rem;
     margin: 2rem;
@@ -33,7 +33,7 @@
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    background-color: #825959;
+    background-color: #5c4b42;
     border: 3px solid;
     border-radius: 10px;
   }
