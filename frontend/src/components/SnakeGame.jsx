@@ -3,6 +3,7 @@
 
 import{ useState, useEffect, useRef } from 'react';
 import './SnakeGame.css';
+import { Link } from 'react-router-dom';
 
 const SnakeGame = ({ setShowSnakeGame }) => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
@@ -159,7 +160,8 @@ const SnakeGame = ({ setShowSnakeGame }) => {
             <div>
               <h3>Game Over! Your Score: {score}</h3>
               <button onClick={handlePlayAgain}>Play Again</button>
-              <button onClick={() => setShowSnakeGame(false)}>Go back</button>
+              <Link to="/Home"><button>Home</button></Link>
+              
             </div>
           )}
         </div>
@@ -171,3 +173,5 @@ const SnakeGame = ({ setShowSnakeGame }) => {
 };
 
 export default SnakeGame;
+
+//il metodo di prima per ritornare alla pagina home <button onClick={() => setShowSnakeGame(false)}>Go back</button>

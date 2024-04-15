@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
+import Navbar from './Navbar';
 import './Scoreboard.css'
 
-const Scoreboard = ({ gameName, gameId }) => {
+const Scoreboard = ({ gameName, gameId, isHome }) => {
   //va convertito da string a number
   const gameIdNumber = Number(gameId);
 
@@ -33,8 +34,9 @@ const Scoreboard = ({ gameName, gameId }) => {
     </li>
   ));
 
-  return (
+  return ( 
     <div className="scoreboard">
+      {!isHome && <Navbar></Navbar>}
       <h2 className="scoreboardTitle">
           Scoreboard {gameName}
       </h2>

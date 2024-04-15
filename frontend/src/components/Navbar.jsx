@@ -1,16 +1,9 @@
-import Scoreboard from "./Scoreboard";
+//import Scoreboard from "./Scoreboard";
 import "./Navbar.css"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const gameOneName = "Snake"
-    const gameTwoName = "Other game name"
-
-    function handleGame(id){
-        //TODO APRIRE LA CLASSIFICA DEL GIOCO richiesto
-        const gameName = id == 1 ? gameOneName : gameTwoName 
-        return <Scoreboard gameName={gameName} gameId={id}></Scoreboard>
-    }
-
+  
     function logOut(){
         //TODO GESTIRE IL LOGOUT
         alert("logOut")
@@ -23,8 +16,10 @@ const Navbar = () => {
             <p className="playerName">Player 1</p>
         </div>
         <div className="scoreboard-buttons">
-            <button className="scoreboard-button gameButton" onClick={handleGame(1)}>Scoreboard Snake</button>
-            <button className="scoreboard-button gameButton" onClick={handleGame(2)}>Scoreboard Second</button>
+          <Link to="/scoreboard"><button className="scoreboard-button gameButton">Scoreboard Snake</button></Link>
+          <Link to="/scoreboard"><button className="scoreboard-button gameButton">Scoreboard Game2</button></Link>
+          <Link to="/home"><button className="scoreboard-button gameButton">Home Page</button></Link>
+
         </div>
       </div>
       <div className="rightSection">

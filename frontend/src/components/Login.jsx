@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
 import "./Login.css"
 
 const Login = ({ onSubmit }) => {
@@ -16,7 +17,8 @@ const Login = ({ onSubmit }) => {
         <input type = 'text' placeholder="username..." required></input>
         <label htmlFor="password">Password: </label>
         <input type='password' placeholder="password..." required></input>
-        <button type='submit'> LOGIN </button>
+        <Link to="/Home" ><button type='submit'> LOGIN </button></Link>
+        
       </form>
     </div>
   )

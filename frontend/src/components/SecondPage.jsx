@@ -4,6 +4,7 @@ import Scoreboard from './Scoreboard';
 import SnakeGame from './SnakeGame';
 import './SecondPage.css';
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom';
 
 const SecondPage = () => {
   const imageSrc1 = '/images/snake.png';
@@ -15,12 +16,6 @@ const SecondPage = () => {
 
   const [showSnakeGame, setShowSnakeGame] = useState(false); // State variable to control the display of SnakeGame
 
-  const handleCardClick = () => {
-    if (!showSnakeGame) {
-      setShowSnakeGame(true); // Set showSnakeGame to true when the first Card is clicked
-    }
-  };
-
   return (
     <div className="parentDiv">
       <div className="container">
@@ -31,7 +26,7 @@ const SecondPage = () => {
           <div className='displayDiv'>
             <Navbar></Navbar>
             <div className='itemsDiv'>
-              <Card imageSrc={imageSrc1} gameName={gameOneName} description={description} onClick={handleCardClick} />
+            <Link to="/Snake"><Card imageSrc={imageSrc1} gameName={gameOneName} description={description}  /></Link> 
               <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
             </div>
             <div className='itemsDiv'>
@@ -46,3 +41,4 @@ const SecondPage = () => {
 };
 
 export default SecondPage;
+
