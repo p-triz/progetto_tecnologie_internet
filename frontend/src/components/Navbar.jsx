@@ -24,7 +24,8 @@ const Navbar = () => {
       </div>
       <div className="rightSection">
         <div className="logOutSection">
-            <button className="buttonLogOut" onClick={logOut}>LogOut</button>
+          <Link to="/"><button className="buttonLogOut" onClick={logOut}>LogOut</button></Link>
+            
         </div>
       </div>
     </div>
