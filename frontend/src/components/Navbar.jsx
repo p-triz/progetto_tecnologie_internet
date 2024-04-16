@@ -1,9 +1,13 @@
-//import Scoreboard from "./Scoreboard";
+/* eslint-disable react/prop-types */
 import "./Navbar.css"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  
+
+  const location = useLocation();
+  //const isHomePage = location.pathname === '/home';
+
+
     function logOut(){
         //TODO GESTIRE IL LOGOUT
         alert("logOut")
@@ -16,9 +20,9 @@ const Navbar = () => {
             <p className="playerName">Player 1</p>
         </div>
         <div className="scoreboard-buttons">
-          <Link to="/scoreboard"><button className="scoreboard-button gameButton">Scoreboard Snake</button></Link>
-          <Link to="/scoreboard"><button className="scoreboard-button gameButton">Scoreboard Game2</button></Link>
-          <Link to="/home"><button className="scoreboard-button gameButton">Home Page</button></Link>
+          <Link to="/scoreboard1"><button className="scoreboard-button gameButton">Scoreboard Snake</button></Link>
+          <Link to="/scoreboard2"><button className="scoreboard-button gameButton">Scoreboard Game2</button></Link>
+          {location.pathname.startsWith("/scoreboard") && <Link to="/home"><button className="scoreboard-button gameButton">Home Page</button></Link>}
 
         </div>
       </div>

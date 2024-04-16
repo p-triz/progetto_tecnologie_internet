@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import Card from './Card';
 import Scoreboard from './Scoreboard';
-import SnakeGame from './SnakeGame';
 import './SecondPage.css';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
@@ -14,15 +12,9 @@ const SecondPage = () => {
   const gameOneName = 'Snake';
   const gameTwoName = 'GAME2';
 
-  const [showSnakeGame, setShowSnakeGame] = useState(false); // State variable to control the display of SnakeGame
-
   return (
     <div className="parentDiv">
       <div className="container">
-        {showSnakeGame? (
-
-            <SnakeGame setShowSnakeGame={setShowSnakeGame} />          
-        ) : (
           <div className='displayDiv'>
             <Navbar></Navbar>
             <div className='itemsDiv'>
@@ -34,7 +26,6 @@ const SecondPage = () => {
               <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
             </div>
           </div>
-        )}
       </div>
     </div>
   );

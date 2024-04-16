@@ -2,7 +2,7 @@
 import Navbar from './Navbar';
 import './Scoreboard.css'
 
-const Scoreboard = ({ gameName, gameId, isHome }) => {
+const Scoreboard = ({ gameName, gameId }) => {
   //va convertito da string a number
   const gameIdNumber = Number(gameId);
 
@@ -36,7 +36,7 @@ const Scoreboard = ({ gameName, gameId, isHome }) => {
 
   return ( 
     <div className="scoreboard">
-      {!isHome && <Navbar></Navbar>}
+      <Navbar></Navbar>
       <h2 className="scoreboardTitle">
           Scoreboard {gameName}
       </h2>

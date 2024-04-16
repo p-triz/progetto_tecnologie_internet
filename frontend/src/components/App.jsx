@@ -4,6 +4,8 @@ import SecondPage from './SecondPage';
 import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import SnakeGame from './SnakeGame';
 import Scoreboard from './Scoreboard';
+import Error from './Error';
+
 
 const App = () => {
  
@@ -14,7 +16,9 @@ const App = () => {
         <Route path="/" element={<Login />}></Route>
         <Route path="/Home/" element={<SecondPage/>}></Route>
         <Route path="/Snake" element={<SnakeGame/>}></Route>
-        <Route path="/scoreboard" element={<Scoreboard/>}></Route>
+        <Route path="/scoreboard1" element={<Scoreboard gameId="1"/>}></Route>
+        <Route path="/scoreboard2" element={<Scoreboard gameId="2"/>}></Route>
+        <Route path='/*' element={<Error></Error>}></Route>
       </Routes>
       </BrowserRouter>
       
