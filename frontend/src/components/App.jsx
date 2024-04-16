@@ -16,8 +16,8 @@ const App = () => {
         <Route path="/" element={<Login />}></Route>
         <Route path="/Home/" element={<SecondPage/>}></Route>
         <Route path="/Snake" element={<SnakeGame/>}></Route>
-        <Route path="/scoreboard1" element={<Scoreboard gameId="1"/>}></Route>
-        <Route path="/scoreboard2" element={<Scoreboard gameId="2"/>}></Route>
+        <Route path="/scoreboard1" element={<div className='scoreboardPage'><Scoreboard gameId="1" pageId={1}/></div>}></Route>
+        <Route path="/scoreboard2" element={<div className='scoreboardPage'><Scoreboard gameId="2" pageId={1}/></div>}></Route>
         <Route path='/*' element={<Error></Error>}></Route>
       </Routes>
       </BrowserRouter>

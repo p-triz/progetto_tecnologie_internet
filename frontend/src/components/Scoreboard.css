@@ -7,6 +7,13 @@
     border-radius: 2px;
   }
 
+  .scoreboardPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
   .scoreboardTitle {
     font-size: 1.5rem;
     font-weight: bold;
