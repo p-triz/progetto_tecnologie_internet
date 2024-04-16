@@ -136,10 +136,6 @@ const SnakeGame = () => {
     };
   }, [snake, direction, gameOver, apple, score, draw, move]); // Added score and gameOver to the dependency array
 
-  // eslint-disable-next-line no-unused-vars
-  const handleGameOver = () => {
-    setGameOver(true);
-  };
 
   const handlePlayAgain = () => {
     setSnake([{ x: 10, y: 10 }]);

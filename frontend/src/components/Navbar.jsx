@@ -5,9 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
 
   const location = useLocation();
-  //const isHomePage = location.pathname === '/home';
-
-
+  
     function logOut(){
         //TODO GESTIRE IL LOGOUT
         alert("logOut")
