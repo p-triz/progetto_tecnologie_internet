@@ -15,24 +15,19 @@ const SecondPage = () => {
   return (
     <div className="parentDiv">
       <div className="container">
-        {showSnakeGame? (
-            <div className='gameContainer'>
-              <SnakeGame setShowSnakeGame={setShowSnakeGame}/> 
-            </div>         
-        ) : (
-          <div className='displayDiv'>
-            <Navbar></Navbar>
-            <div className='itemsDiv'>
-            <Link to="/Snake"><Card imageSrc={imageSrc1} gameName={gameOneName} description={description}  /></Link> 
-              <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
-            </div>
-            <div className='itemsDiv'>
-              <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2} />
-              <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
-            </div>
-          </div>
+       <div className='displayDiv'>
+        <Navbar></Navbar>
+        <div className='itemsDiv'>
+          <Link to="/Snake"><Card imageSrc={imageSrc1} gameName={gameOneName} description={description} /></Link>
+          <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
+        </div>
+        <div className='itemsDiv'>
+          <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2}/>
+          <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
+        </div>
+       </div>
       </div>
-    </div>
+    </div>    
   );
 };
 
