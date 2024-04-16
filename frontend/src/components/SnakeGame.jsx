@@ -5,7 +5,7 @@ import{ useState, useEffect, useRef } from 'react';
 import './SnakeGame.css';
 import { Link } from 'react-router-dom';
 
-const SnakeGame = ({ setShowSnakeGame }) => {
+const SnakeGame = () => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [direction, setDirection] = useState('right');
   const [apple, setApple] = useState({ x: 5, y: 5 });
@@ -175,5 +175,3 @@ const SnakeGame = ({ setShowSnakeGame }) => {
 };
 
 export default SnakeGame;
-
-//il metodo di prima per ritornare alla pagina home <button onClick={() => setShowSnakeGame(false)}>Go back</button>
