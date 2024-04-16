@@ -6,6 +6,8 @@
     border: 5px solid #9b967c;
     border-radius: 5px;
     background-color: #927272;
+    display: flex;
+    flex-direction: column;
 }
 
 .loginDiv h2{
@@ -32,14 +34,28 @@
     font-weight: bold;   
 }
 
-.loginDiv button{
+.logButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 100%;
     background-color: #dabc9eb4;
     color: rgb(101, 64, 64);
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
 }

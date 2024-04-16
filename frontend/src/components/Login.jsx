@@ -17,8 +17,9 @@ const Login = ({ onSubmit }) => {
         <input type = 'text' placeholder="username..." required></input>
         <label htmlFor="password">Password: </label>
         <input type='password' placeholder="password..." required></input>
-        <Link to="/Home" ><button type='submit'> LOGIN </button></Link>
-        
+        <div className="logButton">
+          <Link to="/Home" className="link"><button className="button" type='submit'> LOGIN </button></Link>
+        </div>
       </form>
     </div>
   )

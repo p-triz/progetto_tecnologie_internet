@@ -18,6 +18,7 @@
     border: 3px solid #9b967c;
     padding: 0.5rem;
     margin: 2rem;
+    margin-top: 4rem;
   }
   
   .card-img-top {
@@ -34,7 +35,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     background-color: #5c4b42;
-    border: 3px solid;
+    border: 3px solid white;
     border-radius: 10px;
   }
 
@@ -47,7 +48,6 @@
     line-height: 1.5;
     background-color:  #dabc9eb4;
     text-align: center;
-    margin: px;
-    border: 1px solid;
+    border: 1px solid white;
     border-radius: 2px;
   }

@@ -20,8 +20,9 @@ const SecondPage = () => {
     <div className="parentDiv">
       <div className="container">
         {showSnakeGame? (
-
-            <SnakeGame setShowSnakeGame={setShowSnakeGame} />          
+            <div className='gameContainer'>
+              <SnakeGame setShowSnakeGame={setShowSnakeGame}/> 
+            </div>         
         ) : (
           <div className='displayDiv'>
             <Navbar></Navbar>
