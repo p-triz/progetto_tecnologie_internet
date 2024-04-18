@@ -1,12 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import "./Login.css"
 
-const Login = ({ onSubmit }) => {
+const Login = ({ username, password, setUsername, setPassword}) => {
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit();
+    setUsername(event.target.username.value);
+    setPassword(event.target.password.value);
+    navigate("/Home/");
   }
 
   return (
@@ -14,11 +18,11 @@ const Login = ({ onSubmit }) => {
       <h2>SIGN IN TO PLAY</h2>
       <form className="loginForm" onSubmit={handleSubmit}>
         <label htmlFor="username">Username: </label>
-        <input type = 'text' placeholder="username..." required></input>
+        <input type = 'text' placeholder="username..." name="username" required></input>
         <label htmlFor="password">Password: </label>
-        <input type='password' placeholder="password..." required></input>
+        <input type='password' placeholder="password..." name="password" required></input>
         <div className="logButton">
-          <Link to="/Home" className="link"><button className="button" type='submit'> LOGIN </button></Link>
+          <button className="button" type='submit'> LOGIN </button>
         </div>
       </form>
     </div>

@@ -2,7 +2,7 @@
 import Navbar from './Navbar';
 import './Scoreboard.css'
 
-const Scoreboard = ({ gameName, gameId, pageId}) => {
+const Scoreboard = ({ gameName, gameId, username}) => {
   //va convertito da string a number
   const gameIdNumber = Number(gameId);
 
@@ -35,8 +35,8 @@ const Scoreboard = ({ gameName, gameId, pageId}) => {
   ));
 
   return ( 
-    <div className="scoreboard" pageId={pageId}>
-      <Navbar></Navbar>
+    <div className="scoreboard" >
+      <Navbar username={username}></Navbar>
       <div className='scoreboardContainer'>
         <h2 className="scoreboardTitle">
             Scoreboard {gameName}
