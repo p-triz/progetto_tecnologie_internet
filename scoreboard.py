@@ -9,6 +9,6 @@ def send_score():
         {"player": "fifthPlayer", "score": 50, "id": 2},
         {"player": "fourthPlayer", "score": 40, "id": 1},
         {"player": "fifthPlayer", "score": 50, "id": 1},
-        {"player": "fifthPlayer", "score": 60, "id": 1},
+        {"player": "fifthPlayer", "score": 5, "id": 1},
     ]
     return jsonify(scores)
