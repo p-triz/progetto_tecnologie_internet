@@ -41,7 +41,7 @@
 
 .buttonLogOut{
   border-radius: 25px;
-  background-color: #5c4b42;
+  background-color: #8f1919;
   border: 3px solid;
   padding: 10px;
   transition: all 0.5s;
@@ -49,7 +49,7 @@
 }
 
 .buttonLogOut:hover{
-  background-color: #80685b;
+  background-color: #c80000;
   border: 2px solid;
   padding: 15px;
 }
@@ -69,4 +69,11 @@
   padding: 15px;
   border: 2px solid;
 
+}
+
+.sectionPlayerName{
+  height: fit-content;
+  background-color: rgba(34, 167, 151, 0.622);
+  border: 2px solid;
+  border-radius: 20px;
 }

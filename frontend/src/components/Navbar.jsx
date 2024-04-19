@@ -2,20 +2,20 @@
 import "./Navbar.css"
 import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({username}) => {
 
   const location = useLocation();
   
     function logOut(){
         //TODO GESTIRE IL LOGOUT
-        alert("logOut")
+        alert("logOut");
     }
 
   return (
     <div className="navbar">
       <div className="left-section">
-        <div className="SectionPlayerName">
-            <p className="playerName">Player 1</p>
+        <div className="sectionPlayerName">
+            <p className="playerName">{username}</p>
         </div>
         <div className="scoreboard-buttons">
           <Link to="/scoreboard1"><button className="scoreboard-button gameButton">Scoreboard Snake</button></Link>

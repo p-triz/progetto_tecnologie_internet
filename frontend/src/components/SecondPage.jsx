@@ -4,7 +4,7 @@ import './SecondPage.css';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
-const SecondPage = () => {
+const SecondPage = ({username}) => {
   const imageSrc1 = '/images/snake.png';
   const imageSrc = ''
   const description = 'Move your snake and let him eat apples';
@@ -16,14 +16,14 @@ const SecondPage = () => {
     <div className="parentDiv">
       <div className="container">
        <div className='displayDiv'>
-        <Navbar></Navbar>
+        <Navbar username={username}></Navbar>
         <div className='itemsDiv'>
           <Link to="/Snake"><Card imageSrc={imageSrc1} gameName={gameOneName} description={description} /></Link>
-          <Scoreboard gameName={gameOneName} gameId="1"></Scoreboard>
+          <Scoreboard gameName={gameOneName} gameId="1" username={username}></Scoreboard>
         </div>
         <div className='itemsDiv'>
           <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2}/>
-          <Scoreboard gameName={gameTwoName} gameId="2"></Scoreboard>
+          <Scoreboard gameName={gameTwoName} gameId="2" username={username}></Scoreboard>
         </div>
        </div>
       </div>
