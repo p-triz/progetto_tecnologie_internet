@@ -1,50 +1,48 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import Navbar from './Navbar';
+import { useEffect, useState } from 'react';
+import Navbar from './Navbar'
 import './Scoreboard.css'
+import axios from 'axios'
 
-const Scoreboard = ({ gameName, gameId, pageId}) => {
-  //va convertito da string a number
-  const gameIdNumber = Number(gameId);
+const Scoreboard = ({ gameId, gameName, pageId}) => {
 
-  //TODO -> ovviamente questa variabile va cambiata con quella vera che avremo
-  //era solo per testare che funzionasse
-  //il problema sarà capire come associare ad ogni elemento della lista anche un id (fondamentale in react)
+  const [scores, setScores] = useState([]);
+  //connect to backend to get the data
+  const fetchData = async () => {
+    const response = await axios.get(`http://127.0.0.1:5000/api/score`);
+    console.log(response.data);
+    setScores(response.data)
+  };
 
-  //score per il primo gioco
-  const scoresG1 = [
-    { player: "firstPlayer", score: 10, id: 1 },
-    { player: "secondPlayer", score: 20, id: 2 },
-  ];
-  //score per il secondo gioco
-  const scoresG2 = [
-    { player: "thirdPlayer", score: 30, id: 3 },
-    { player: "fourthPlayer", score: 40, id: 4 },
-  ];
+  useEffect(()=>{
+    fetchData()
+  },[])
 
-  //sceglie quale usare per fare la lista 
-  const scores = gameIdNumber === 1 ? scoresG1 : scoresG2;
+  // filter scores based on gameId prop
+  const filteredScores = scores.filter(score => score.id === parseInt(gameId));
 
-  //ordina la lista in base al punteggio
-  scores.sort((a, b) => b.score - a.score);
+  // sort filtered scores in descending order based on score property
+  filteredScores.sort((a, b) => b.score - a.score);
 
-  //crea la lista da mandare a schermo
-  const listScores = scores.map((score) => (
-    <li key={score.id}>
-      {score.player} - Score: {score.score}
-    </li>
-  ));
-
-  return ( 
+  return (
     <div className="scoreboard" pageId={pageId}>
-      <Navbar></Navbar>
+      <Navbar />
       <div className='scoreboardContainer'>
         <h2 className="scoreboardTitle">
-            Scoreboard {gameName}
+          Scoreboard {gameName}
         </h2>
-        <ul className="scoreboardList">{listScores}</ul>
+        <ul className="scoreboardList">
+          {filteredScores.length > 0 && filteredScores.map((score, index) => (
+            <li key={index}>
+              {score.player} - Score: {score.score}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
 };
+
 
 export default Scoreboard
