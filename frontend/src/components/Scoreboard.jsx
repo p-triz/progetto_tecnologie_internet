@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Navbar from './Navbar';
+import "./Scoreboard.css";
 import axios from 'axios';
 
-const Scoreboard = ({ gameId, gameName }) => {
+const Scoreboard = ({ gameId, gameName, username }) => {
   const [scores, setScores] = React.useState([]);
 
   React.useEffect(() => {
@@ -19,7 +20,7 @@ const Scoreboard = ({ gameId, gameName }) => {
 
   return (
     <div className="scoreboard">
-      <Navbar />
+      <Navbar username={username}/>
       <div className="scoreboardContainer">
         <h2 className="scoreboardTitle">Scoreboard {gameName}</h2>
         <ul className="scoreboardList">

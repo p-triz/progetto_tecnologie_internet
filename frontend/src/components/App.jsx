@@ -8,8 +8,8 @@ import Error from './Error';
 import { useState } from 'react';
 
 const App = () => {
-  const [username, setUsername] = useState(' ');
-  const [password, setPassword] = useState(' ');
+  const [username, setUsername] = useState('test');
+  const [password, setPassword] = useState('test');
   const gameName1 = "Snake"
   const gameId1 = "1"
   const gameName2 = "Game2"
