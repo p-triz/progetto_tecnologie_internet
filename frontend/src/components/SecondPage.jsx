@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Card from './Card';
 import Scoreboard from './Scoreboard';
 import './SecondPage.css';
