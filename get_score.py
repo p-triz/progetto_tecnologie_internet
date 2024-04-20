@@ -1,9 +1,9 @@
 from flask import jsonify, request
 
 def receive_game_score():
-    data = request.args.to_dict()
-    playername = data.get('playername')
-    score = data.get('score')
-    gameId = data.get('gameId')
+    data = request.get_json()
+    playername = data['playername']
+    score = data['score']
+    gameId = data['gameId']
 
     print(f"{playername} {score} {gameId}")
