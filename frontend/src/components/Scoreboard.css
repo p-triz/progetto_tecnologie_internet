@@ -1,20 +1,18 @@
-  .scoreboard {
-    width: 16rem;
-    margin: 1rem;
+  .scoreboard{
+    display: flex;
+    justify-content: center;
+  }
+
+  .scoreboardContainer {
+    width: 60%;
+    margin-top: 10rem;
     padding: 1rem;
     background-color: #6c3e3e;
     border: 5px solid #9b967c;
     border-radius: 2px;
   }
 
-  .scoreboardPage{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
-  }
-  .scoreboardTitle {
+ .scoreboardTitle {
     font-size: 1.5rem;
     font-weight: bold;
     background-color: #5c4b42;
@@ -23,6 +21,7 @@
     margin: 10px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
   }
   
   .scoreboardList {
@@ -33,9 +32,10 @@
   
   .scoreboardList li {
     padding: 1rem;
-    background-color:  #dabc9eb4;
+    background-color:  #a08262;
     border: 1px solid;
     border-radius: 2px;
+    font-size: x-large;
   }
   
   

@@ -4,7 +4,7 @@
     margin: 1rem;
     margin-top: 3rem;
     background-color: #6c3e3e;
-    border: 5px solid #9b967c;
+    border: 5px solid #787460;
     border-radius: 25px;
     cursor: pointer;
     padding: 1rem;
@@ -15,10 +15,9 @@
     width: 20rem;
     height: 22rem;
     background-color: #804e4e;
-    border: 3px solid #9b967c;
+    border: 3px solid #787460;
     padding: 0.5rem;
     margin: 2rem;
-    margin-top: 4rem;
   }
   
   .card-img-top {
@@ -39,6 +38,7 @@
     border-radius: 10px;
   }
 
+
   .card-body {
     padding: 0.75rem;
   }
@@ -46,7 +46,7 @@
   .card-text {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.5;
-    background-color:  #dabc9eb4;
+    background-color:  #a08262;
     text-align: center;
     border: 1px solid white;
     border-radius: 2px;

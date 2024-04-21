@@ -19,12 +19,11 @@ const SecondPage = ({username}) => {
        <div className='displayDiv'>
         <Navbar username={username}></Navbar>
         <div className='cardsDiv'>
-          <Link to="/Snake"><Card imageSrc={imageSrc1} gameName={gameOneName} description={description} /></Link>
-          <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2}/>
-        </div>
-        <div className='scoreboardsDiv'>
-          <Scoreboard gameName={gameOneName} gameId="1" username={username}></Scoreboard>
-          <Scoreboard gameName={gameTwoName} gameId="2" username={username}></Scoreboard>
+          <h2 className='title'>GAMES</h2>
+          <div className='items'>
+            <Link to="/Snake" className='Link'><Card imageSrc={imageSrc1} gameName={gameOneName} description={description} /></Link>
+            <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2}/>
+          </div>
         </div>
        </div>
       </div>

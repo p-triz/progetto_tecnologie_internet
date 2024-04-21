@@ -22,8 +22,8 @@ const App = () => {
         <Route path="/" element={<Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} />}></Route>
         <Route path="/Home/" element={<SecondPage username={username}/>}></Route>
         <Route path="/Snake" element={<SnakeGame/>}></Route>
-        <Route path="/scoreboard1" element={<div className='scoreboardPage'><Scoreboard gameName={gameName1} gameId={gameId1} username={username} /></div>}></Route>
-        <Route path="/scoreboard2" element={<div className='scoreboardPage'><Scoreboard gameName={gameName2} gameId={gameId2} username={username} /></div>}></Route>
+        <Route path="/scoreboard1" element={<Scoreboard gameName={gameName1} gameId={gameId1} username={username} />}></Route>
+        <Route path="/scoreboard2" element={<Scoreboard gameName={gameName2} gameId={gameId2} username={username} />}></Route>
         <Route path='/*' element={<Error></Error>}></Route>
         </Routes>
       </BrowserRouter>
