@@ -18,12 +18,12 @@ const SecondPage = ({username}) => {
       <div className="container">
        <div className='displayDiv'>
         <Navbar username={username}></Navbar>
-        <div className='itemsDiv'>
+        <div className='cardsDiv'>
           <Link to="/Snake"><Card imageSrc={imageSrc1} gameName={gameOneName} description={description} /></Link>
-          <Scoreboard gameName={gameOneName} gameId="1" username={username}></Scoreboard>
-        </div>
-        <div className='itemsDiv'>
           <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2}/>
+        </div>
+        <div className='scoreboardsDiv'>
+          <Scoreboard gameName={gameOneName} gameId="1" username={username}></Scoreboard>
           <Scoreboard gameName={gameTwoName} gameId="2" username={username}></Scoreboard>
         </div>
        </div>
