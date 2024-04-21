@@ -7,9 +7,13 @@ const Login = ({ username, password, setUsername, setPassword}) => {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    setUsername(event.target.username.value);
-    setPassword(event.target.password.value);
+    event.preventDefault(); 
+    const currUser = event.target.username.value;
+    const currPassword = event.target.password.value;
+    setUsername(currUser);
+    setPassword(currPassword);
+    localStorage.setItem("username", currUser);
+    localStorage.setItem("password", currPassword);
     navigate("/Home/");
   }
 

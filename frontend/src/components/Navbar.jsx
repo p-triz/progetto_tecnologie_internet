@@ -1,15 +1,26 @@
 /* eslint-disable react/prop-types */
 import "./Navbar.css"
 import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
-const Navbar = ({username}) => {
+const Navbar = ({username, setUsername}) => {
 
   const location = useLocation();
   
     function logOut(){
         //TODO GESTIRE IL LOGOUT
         alert("logOut");
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
     }
+
+    useEffect(() => {
+      // Retrieve username from localStorage when component mounts
+      const savedUsername = localStorage.getItem('username');
+      if (savedUsername != "default") {
+        setUsername(savedUsername);
+      }
+    }, [username]);
 
   return (
     <div className="navbar">

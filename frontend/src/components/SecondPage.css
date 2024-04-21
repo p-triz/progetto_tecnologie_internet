@@ -39,14 +39,3 @@
   color: inherit;
 }
 
-@media (max-width: 768px) {
-  .card,
-  .scoreboard {
-    width: 100%;
-    order: 1;
-  }
-
-  .scoreboardList {
-    padding-left: 0;
-  }
-}

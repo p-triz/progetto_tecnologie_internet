@@ -3,8 +3,9 @@ import React from 'react';
 import Navbar from './Navbar';
 import "./Scoreboard.css";
 import axios from 'axios';
+import { useEffect } from 'react';
 
-const Scoreboard = ({ gameId, gameName, username }) => {
+const Scoreboard = ({ gameId, gameName, username, setUsername}) => {
   const [scores, setScores] = React.useState([]);
 
   React.useEffect(() => {
@@ -20,7 +21,7 @@ const Scoreboard = ({ gameId, gameName, username }) => {
 
   return (
     <div className="scoreboard">
-      <Navbar username={username}/>
+      <Navbar username={username} setUsername={setUsername}/>
       <div className="scoreboardContainer">
         <h2 className="scoreboardTitle">Scoreboard {gameName}</h2>
         <ul className="scoreboardList">
