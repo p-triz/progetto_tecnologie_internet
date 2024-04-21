@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
-
-import{ useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
 import './SnakeGame.css';
 import { Link } from 'react-router-dom';
 
@@ -93,7 +92,7 @@ const SnakeGame = () => {
         break;
       case 40:
         setDirection('down');
-        break;
+       break;
       case 37:
         setDirection('left');
         break;
@@ -134,8 +133,23 @@ const SnakeGame = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [snake, direction, gameOver, apple, score, draw, move]); // Added score and gameOver to the dependency array
+  }, [snake, direction, gameOver, apple, score, draw, move, axios]);
 
+  useEffect(() => {
+    if (gameOver) {
+      const playerName = 'playerName'; // replace with the actual player name
+      const gameId = '1'; // replace with the actual game ID
+
+      axios.post('http://127.0.0.1:5000/api/game', { playername: playerName, score: score, gameId: gameId })
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gameOver]);
 
   const handlePlayAgain = () => {
     setSnake([{ x: 10, y: 10 }]);
@@ -166,7 +180,6 @@ const SnakeGame = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

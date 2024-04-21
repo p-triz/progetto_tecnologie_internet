@@ -8,10 +8,10 @@ cors = CORS (app, origins="*")
 
 
 @app.route("/api/score", methods=['GET'])
-def sendScore():
+def send_score():
     return sC()    
 
-@app.route("/api/snake", methods=['POST'])
+@app.route("/api/game", methods=['POST'])
 def receive_score():
     return rGS()
 
