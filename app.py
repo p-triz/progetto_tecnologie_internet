@@ -1,7 +1,8 @@
-from flask import Flask, send_from_directory
+from flask import Flask
 from flask_cors import CORS
 from scoreboard import send_score as sC
 from get_score import receive_game_score as rGS
+from login import get_data as gD
 
 app = Flask(__name__)
 cors = CORS (app, origins="*")
@@ -15,9 +16,9 @@ def send_score():
 def receive_score():
     return rGS()
 
-@app.route("/api/login")
+@app.route("/api/login", methods =['GET', 'POST'])
 def login():
-    return "prova"
+    return gD()
 
 if __name__ == '__main__':
     app.run(debug=True)
