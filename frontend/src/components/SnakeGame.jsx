@@ -11,6 +11,8 @@ const SnakeGame = () => {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
+  const username = localStorage.getItem('username');
+
   const gridSize = 20;
   const canvasRef = useRef(null);
 
@@ -137,7 +139,7 @@ const SnakeGame = () => {
 
   useEffect(() => {
     if (gameOver) {
-      const playerName = 'playerName'; // replace with the actual player name
+      const playerName = username; // replace with the actual player name
       const gameId = '1'; // replace with the actual game ID
 
       axios.post('http://127.0.0.1:5000/api/game', { playername: playerName, score: score, gameId: gameId })

@@ -11,10 +11,13 @@ cors = CORS (app, origins="*")
 def send_score():
     return sC()    
 
-@app.route("/api/game", methods=['POST'])
+@app.route("/api/game", methods=['POST', 'GET'])
 def receive_score():
     return rGS()
 
+@app.route("/api/login")
+def login():
+    return "prova"
 
 if __name__ == '__main__':
     app.run(debug=True)
