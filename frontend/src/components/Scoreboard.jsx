@@ -28,7 +28,7 @@ const Scoreboard = ({ gameId, gameName, username, setUsername}) => {
         <ul className="scoreboardList">
           {sortedScores.length > 0 &&
             sortedScores.map((score, index) => (
-              <li key={index} className={score.player.toLowerCase() === usernamePlayer.toLowerCase() ? 'highlighted' : ''}>
+              <li key={index} className={score.player === usernamePlayer ? 'highlighted' : ''}>
                 {score.player} - Score: {score.score}
               </li>
             ))}
