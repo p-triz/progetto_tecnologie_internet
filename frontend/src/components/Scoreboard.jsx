@@ -3,10 +3,11 @@ import React from 'react';
 import Navbar from './Navbar';
 import "./Scoreboard.css";
 import axios from 'axios';
-import { useEffect } from 'react';
+
 
 const Scoreboard = ({ gameId, gameName, username, setUsername}) => {
   const [scores, setScores] = React.useState([]);
+  const usernamePlayer = localStorage.getItem('username');
 
   React.useEffect(() => {
     async function fetchData() {
@@ -27,7 +28,7 @@ const Scoreboard = ({ gameId, gameName, username, setUsername}) => {
         <ul className="scoreboardList">
           {sortedScores.length > 0 &&
             sortedScores.map((score, index) => (
-              <li key={index}>
+              <li key={index} className={score.player.toLowerCase() === usernamePlayer.toLowerCase() ? 'highlighted' : ''}>
                 {score.player} - Score: {score.score}
               </li>
             ))}

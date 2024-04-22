@@ -38,4 +38,6 @@
     font-size: x-large;
   }
   
-  
+  .highlighted{
+    background-color: red !important;
+  }
