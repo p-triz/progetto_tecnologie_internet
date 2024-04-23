@@ -1,12 +1,18 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
 import { Link , useNavigate} from "react-router-dom";
 import "./Login.css"
 
+
+function handleSignin(){
+  alert("ciao")
+}
+
 const Login = ({ username, password, setUsername, setPassword}) => {
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault(); 
     const currUser = event.target.username.value;
     const currPassword = event.target.password.value;
@@ -14,21 +20,27 @@ const Login = ({ username, password, setUsername, setPassword}) => {
     setPassword(currPassword);
     localStorage.setItem("username", currUser);
     localStorage.setItem("password", currPassword);
-    navigate("/Home/");
+    navigate("/Home");
   }
+
+  const welcomeMessage = location.pathname.endsWith("/") ? "LOGIN TO PLAY" : "SIGN IN TO PLAY"
+  const buttonText = location.pathname.endsWith("/") ? "LOGIN" : "SIGN IN"
 
   return (
     <div className="loginDiv">
-      <h2>SIGN IN TO PLAY</h2>
-      <form className="loginForm" onSubmit={handleSubmit}>
+      <h2 >{welcomeMessage}</h2>
+      <form className="loginForm" onSubmit={location.pathname.endsWith("/") ? handleLogin : handleSignin}>
         <label htmlFor="username">Username: </label>
         <input type = 'text' placeholder="username..." name="username" required></input>
         <label htmlFor="password">Password: </label>
         <input type='password' placeholder="password..." name="password" required></input>
         <div className="logButton">
-          <button className="button" type='submit'> LOGIN </button>
+          <button className="button" type='submit'> {buttonText} </button>
         </div>
       </form>
+      <div className="SignInLink" >
+        {location.pathname.endsWith("/") &&  <Link to="/Signin">Sign in</Link> }
+      </div>
     </div>
   )
 }

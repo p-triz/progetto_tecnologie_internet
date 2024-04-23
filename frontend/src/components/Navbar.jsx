@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import "./Navbar.css"
 import { Link, useLocation } from "react-router-dom";
