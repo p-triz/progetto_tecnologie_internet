@@ -5,23 +5,28 @@ import { Link , useNavigate} from "react-router-dom";
 import "./Login.css"
 import axios from 'axios';
 
-async function sendData(userName, userPassword){
-  try {
-    const response = await axios.post('http://127.0.0.1:5000/api/login', { username: userName, password: userPassword });
-    response.data.message ==="Yes" ? alert("yes") : alert("No")
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-
-
-function handleSignin(){
-  alert("ciao")
-}
 
 const Login = ({ username, password, setUsername, setPassword}) => {
   const navigate = useNavigate();
+
+  async function sendDataLogin(userName, userPassword){
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/api/login', { username: userName, password: userPassword });
+      //TODO da cambiare il messaggio in accordo con il backend
+      response.data.message ==="Incorrect" &&  navigate("/")
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+  async function sendDataSignin(userName, userPassword){
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/api/signin', { username: userName, password: userPassword });
+      response.data.message ==="Done" ?  navigate("/Home") : alert("error")
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   const handleLogin = (event) => {
     event.preventDefault(); 
@@ -29,7 +34,7 @@ const Login = ({ username, password, setUsername, setPassword}) => {
     const currPassword = event.target.password.value;
     setUsername(currUser);
     setPassword(currPassword);
-    sendData(currUser, currPassword)
+    location.pathname.endsWith("/") ? sendDataLogin(currUser, currPassword) : sendDataSignin(currUser, currPassword)
     localStorage.setItem("username", currUser);
     localStorage.setItem("password", currPassword);
     navigate("/Home");
@@ -41,7 +46,7 @@ const Login = ({ username, password, setUsername, setPassword}) => {
   return (
     <div className="loginDiv">
       <h2 >{welcomeMessage}</h2>
-      <form className="loginForm" onSubmit={location.pathname.endsWith("/") ? handleLogin : handleSignin}>
+      <form className="loginForm" onSubmit={ handleLogin }>
         <label htmlFor="username">Username: </label>
         <input type = 'text' placeholder="username..." name="username" required></input>
         <label htmlFor="password">Password: </label>

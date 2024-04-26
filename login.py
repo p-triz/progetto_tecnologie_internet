@@ -12,9 +12,9 @@ def get_data():
 
     #TODO controllo al db con questioni di sicurezza ovviamente, restituisce un bool
     check = True
-    #se sono corretti invio esito positvo al client
+
     if check == True : 
-        return jsonify({'message': 'Yes'})
-    #altimenti negativo
+        return jsonify({'message': 'Correct'})
+
     else:
-        return jsonify({'message': 'No'})
+        return jsonify({'message': 'Incorrect'})
