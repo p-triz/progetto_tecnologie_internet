@@ -139,8 +139,8 @@ const SnakeGame = () => {
 
   useEffect(() => {
     if (gameOver) {
-      const playerName = username; // replace with the actual player name
-      const gameId = '1'; // replace with the actual game ID
+      const playerName = username; 
+      const gameId = '1'; 
 
       axios.post('http://127.0.0.1:5000/api/game', { playername: playerName, score: score, gameId: gameId })
         .then(response => {
@@ -150,7 +150,6 @@ const SnakeGame = () => {
           console.error(error);
         });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameOver]);
 
   const handlePlayAgain = () => {

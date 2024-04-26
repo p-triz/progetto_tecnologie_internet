@@ -3,6 +3,17 @@
 
 import { Link , useNavigate} from "react-router-dom";
 import "./Login.css"
+import axios from 'axios';
+
+async function sendData(userName, userPassword){
+  try {
+    const response = await axios.post('http://127.0.0.1:5000/api/login', { username: userName, password: userPassword });
+    response.data.message ==="Yes" ? alert("yes") : alert("No")
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
 
 function handleSignin(){
@@ -18,6 +29,7 @@ const Login = ({ username, password, setUsername, setPassword}) => {
     const currPassword = event.target.password.value;
     setUsername(currUser);
     setPassword(currPassword);
+    sendData(currUser, currPassword)
     localStorage.setItem("username", currUser);
     localStorage.setItem("password", currPassword);
     navigate("/Home");

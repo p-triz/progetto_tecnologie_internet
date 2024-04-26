@@ -16,7 +16,7 @@ def send_score():
 def receive_score():
     return rGS()
 
-@app.route("/api/login", methods =['GET', 'POST'])
+@app.route("/api/login", methods =['POST'])
 def login():
     return gD()
 
