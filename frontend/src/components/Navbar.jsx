@@ -9,8 +9,6 @@ const Navbar = ({username, setUsername}) => {
   const location = useLocation();
   
     function logOut(){
-        //TODO GESTIRE IL LOGOUT
-        alert("logOut");
         localStorage.removeItem("username");
         localStorage.removeItem("password");
     }
