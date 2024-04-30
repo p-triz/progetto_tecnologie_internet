@@ -12,7 +12,6 @@ const Login = ({ username, password, setUsername, setPassword}) => {
   async function sendDataLogin(userName, userPassword){
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/login', { username: userName, password: userPassword });
-      //TODO da cambiare il messaggio in accordo con il backend
       response.data.message ==="Incorrect" &&  navigate("/")
     } catch (error) {
       console.error(error);

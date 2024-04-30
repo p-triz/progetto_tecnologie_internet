@@ -4,6 +4,15 @@ import axios from 'axios';
 import './SnakeGame.css';
 import { Link } from 'react-router-dom';
 
+async function sendScore(playerName,score){
+  const gameId = '1';
+  try {
+    axios.post('http://127.0.0.1:5000/api/game', { playername: playerName, score: score, gameId: gameId })
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 const SnakeGame = () => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [direction, setDirection] = useState('right');
@@ -78,6 +87,7 @@ const SnakeGame = () => {
   const checkCollision = (head) => {
     if (head.x < 0 || head.y < 0 || head.x >= canvasRef.current.height / gridSize || head.y >= canvasRef.current.width / gridSize) {
       setGameOver(true);
+      sendScore(username,score)
     }
 
     for (let i = 1; i < snake.length; i++) {
@@ -137,20 +147,7 @@ const SnakeGame = () => {
     };
   }, [snake, direction, gameOver, apple, score, draw, move, axios]);
 
-  useEffect(() => {
-    if (gameOver) {
-      const playerName = username; 
-      const gameId = '1'; 
-
-      axios.post('http://127.0.0.1:5000/api/game', { playername: playerName, score: score, gameId: gameId })
-        .then(response => {
-          console.log(response.data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }
-  }, [gameOver]);
+  
 
   const handlePlayAgain = () => {
     setSnake([{ x: 10, y: 10 }]);
