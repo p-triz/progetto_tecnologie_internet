@@ -22,7 +22,7 @@ const SecondPage = ({username, setUsername}) => {
           <h1 className='title'>GAMES</h1>
           <div className='items'>
             <Link to="/Snake" className='Link'><Card imageSrc={imageSrc1} gameName={gameOneName} description={description} /></Link>
-            <Card imageSrc={imageSrc} gameName={gameTwoName} description={description2}/>
+            <Link to="/FlappyBird" className='Link'><Card imageSrc={imageSrc} gameName={gameTwoName} description={description2}/></Link>
           </div>
         </div>
        </div>
