@@ -64,3 +64,8 @@
 .loginDiv button:hover{
     background-color:  #dabc9ee3;
 }
+
+.SignInLink{
+    display: flex;
+    justify-content: center;
+}
