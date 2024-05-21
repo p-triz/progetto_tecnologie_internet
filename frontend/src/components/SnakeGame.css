@@ -19,6 +19,10 @@
   .menu{
     display: flex;
     flex-direction: column;
+    background-color: #9b7145;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 15px;
   }
 
   .score{
@@ -40,7 +44,12 @@
     border-radius: 25px;
     padding: 10px;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.3s;
+  }
+
+  button:hover{
+    padding: 15px;
+    background-color: #785f51;
   }
 
   .titleSnake{

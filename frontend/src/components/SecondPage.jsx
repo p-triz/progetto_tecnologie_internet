@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const SecondPage = ({username, setUsername}) => {
   const imageSrc1 = '/images/snake.png';
-  const imageSrc = ''
+  const imageSrc = '/images/flappy_bird.png'
   const description = 'Move your snake and let him eat apples';
   const description2 = 'Second Game';
   const gameOneName = 'Snake';
