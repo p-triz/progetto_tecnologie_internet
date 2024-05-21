@@ -28,8 +28,8 @@ const Navbar = ({username, setUsername}) => {
             <p className="playerName">{username}</p>
         </div>
         <div className="scoreboard-buttons">
-          <Link to="/scoreboard1"><button className="scoreboard-button gameButton">Scoreboard Snake</button></Link>
-          <Link to="/scoreboard2"><button className="scoreboard-button gameButton">Scoreboard Game2</button></Link>
+          <Link to="/scoreboard/1"><button className="scoreboard-button gameButton">Scoreboard Snake</button></Link>
+          <Link to="/scoreboard/2"><button className="scoreboard-button gameButton">Scoreboard Flappy Bird</button></Link>
           {location.pathname.startsWith("/scoreboard") && <Link to="/home"><button className="scoreboard-button gameButton">Home Page</button></Link>}
 
         </div>
