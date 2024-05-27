@@ -12,7 +12,12 @@ const Login = ({ username, password, setUsername, setPassword}) => {
   async function sendDataLogin(userName, userPassword){
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/login', { username: userName, password: userPassword });
-      response.data.message ==="Incorrect" &&  navigate("/")
+      if (response.data.message === "Incorrect") {
+        // Mostra un messaggio di avviso
+        alert("Credenziali errate. Riprova.");
+        // Naviga alla pagina '/'
+        navigate("/") 
+    } 
     } catch (error) {
       console.error(error);
     }

@@ -1,5 +1,6 @@
 from flask import request, jsonify
 
+
 def receive_game_score():
     data = request.get_json()
     playername = data['playername']
@@ -8,5 +9,6 @@ def receive_game_score():
 
     print(f"{playername} {score} {gameId}")
 
+    
 
     return jsonify({'message': 'Game score received'})
