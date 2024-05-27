@@ -20,3 +20,8 @@ CREATE TABLE Matches (
   FOREIGN KEY (game_id) REFERENCES Game(game_id),
   FOREIGN KEY (username) REFERENCES User(username)
 );
+
+INSERT INTO Game (game_id, game_name)
+VALUES
+    ('1', 'snake'),
+    ('2', 'flappy');
