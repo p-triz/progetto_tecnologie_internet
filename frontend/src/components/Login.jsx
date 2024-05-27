@@ -17,10 +17,13 @@ const Login = ({ username, password, setUsername, setPassword}) => {
         alert("Credenziali errate. Riprova.");
         // Naviga alla pagina '/'
         navigate("/") 
-    } 
+    } else{
+      navigate("/Home")
+    }
     } catch (error) {
       console.error(error);
     }
+    
   }
   
   async function sendDataSignin(userName, userPassword){
@@ -41,7 +44,6 @@ const Login = ({ username, password, setUsername, setPassword}) => {
     location.pathname.endsWith("/") ? sendDataLogin(currUser, currPassword) : sendDataSignin(currUser, currPassword)
     localStorage.setItem("username", currUser);
     localStorage.setItem("password", currPassword);
-    navigate("/Home");
   }
 
   const welcomeMessage = location.pathname.endsWith("/") ? "LOGIN TO PLAY" : "SIGN IN TO PLAY"

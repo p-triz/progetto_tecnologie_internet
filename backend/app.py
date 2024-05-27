@@ -100,12 +100,18 @@ def save_data():
     #debug
     print(f"username: {username}, password: {password}")
 
-    db = get_db()
-    cur = db.cursor()
-    cur.execute('INSERT INTO User (username, user_password) VALUES (?, ?)', (username, password))
-    db.commit()
+    try:
+        db = get_db()
+        cur = db.cursor()
+        cur.execute('INSERT INTO User (username, user_password) VALUES (?, ?)', (username, password))
+        db.commit()
+        return jsonify({'message': 'Done'})
+    
+    except Exception as e:
+        # Gestione dell'errore durante l'inserimento
+        return jsonify({'message': 'Error: {}'.format(str(e))})
 
-    return jsonify({'message': 'Done'})
+    
 
 
 if __name__ == '__main__':
