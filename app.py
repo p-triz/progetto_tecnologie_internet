@@ -5,9 +5,14 @@ from login import get_data as gD
 from signin import save_data as sD
 from send_score_snake import snake_scores as Ss
 from send_score_flappy import flappy_scores as Fs
+#from . import db
+import db
 
 app = Flask(__name__)
 cors = CORS (app, origins="*")
+
+
+db.init_app(app)
 
 
 @app.route("/api/score/<int:number>", methods=['GET'])
