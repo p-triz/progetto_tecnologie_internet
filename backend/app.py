@@ -1,10 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from get_score import receive_game_score as rGS
-#from login import get_data as gD
-#from signin import save_data as sD
-from send_score_snake import snake_scores as Ss
-from send_score_flappy import flappy_scores as Fs
 from flask import g
 import os
 import sqlite3
@@ -51,19 +47,72 @@ def initdb_command():
     init_db()
     print('Initialized the database.')
 
+ #--- INIZIO API ---
+    
+# Api per invio delle classifiche
 @app.route("/api/score/<int:number>", methods=['GET'])
 def send_score(number):
+    # se il numero passato nell'url è 1 bisogna passare i dati di snake
     if number==1:
-        return Ss() 
+        try:
+            db = get_db()
+            cur = db.cursor()
+            query = 'SELECT username, score, game_id FROM Matches WHERE game_id=1'
+            cur.execute(query)
+            results = cur.fetchall()
+            db.commit()
+            
+            scores = []
+            for row in results:
+                score = {
+                    "player": row[0],
+                    "score": row[1],
+                    "id": row[2]
+                }
+                scores.append(score)
+            
+            return jsonify(scores)
+        
+        except Exception as e:
+            # Gestione dell'errore durante l'inserimento
+            return jsonify({'message': 'Error: {}'.format(str(e))})
+
+    
+     # se è 2 quelli di flappy
     elif number==2:
-        return Fs()
+        try:
+            db = get_db()
+            cur = db.cursor()
+            query = 'SELECT username, score, game_id FROM Matches WHERE game_id=2'
+            cur.execute(query)
+            results = cur.fetchall()
+            db.commit()
+            
+            scores = []
+            for row in results:
+                score = {
+                    "player": row[0],
+                    "score": row[1],
+                    "id": row[2]
+                }
+                scores.append(score)
+            
+            return jsonify(scores)
+        
+        except Exception as e:
+            # Gestione dell'errore durante l'inserimento
+            return jsonify({'message': 'Error: {}'.format(str(e))})
     else:
         return "invalid number provided"
+    
 
+#Api per ricevere il punteggio della partita e aggiornare il db
 @app.route("/api/game", methods=['POST', 'GET'])
 def receive_score():
     return rGS()
 
+
+#Api per controllare che utente possa loggare
 @app.route("/api/login", methods =['POST'])
 def get_data():
     # Ottengo nome utente e password dal client
@@ -89,6 +138,8 @@ def get_data():
         # La query non ha restituito risultati, quindi le credenziali sono errate
         return jsonify({'message': 'Incorrect'})
 
+
+# Aoi per far iscrivere l'utente all'appilicazione
 @app.route("/api/signin", methods=['POST'])
 def save_data():
 
