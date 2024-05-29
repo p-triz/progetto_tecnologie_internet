@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from get_score import receive_game_score as rGS
 from flask import g
 import os
 import sqlite3
@@ -108,8 +107,23 @@ def send_score(number):
 
 #Api per ricevere il punteggio della partita e aggiornare il db
 @app.route("/api/game", methods=['POST', 'GET'])
-def receive_score():
-    return rGS()
+def receive_game_score():
+    data = request.get_json()
+    playername = data['playername']
+    score = data['score']
+    gameId = data['gameId']
+
+    print(f"{playername} {score} {gameId}")
+    try:
+        db = get_db()
+        cur = db.cursor()
+        cur.execute('INSERT INTO Matches (game_id, score, username) VALUES (?, ?, ?)', (gameId, score, playername))
+        db.commit()
+        return jsonify({'message': 'Done'})
+    
+    except Exception as e:
+        # Gestione dell'errore durante l'inserimento
+        return jsonify({'message': 'Error: {}'.format(str(e))})
 
 
 #Api per controllare che utente possa loggare
