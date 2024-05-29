@@ -56,7 +56,7 @@ def send_score(number):
         try:
             db = get_db()
             cur = db.cursor()
-            query = 'SELECT username, score, game_id FROM Matches WHERE game_id=1'
+            query = 'SELECT distinct username, score, game_id FROM Matches WHERE game_id=1'
             cur.execute(query)
             results = cur.fetchall()
             db.commit()
@@ -82,7 +82,7 @@ def send_score(number):
         try:
             db = get_db()
             cur = db.cursor()
-            query = 'SELECT username, score, game_id FROM Matches WHERE game_id=2'
+            query = 'SELECT distinct username, score, game_id FROM Matches WHERE game_id=2'
             cur.execute(query)
             results = cur.fetchall()
             db.commit()
