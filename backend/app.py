@@ -3,9 +3,19 @@ from flask_cors import CORS
 from flask import g
 import os
 import sqlite3
+from werkzeug.security import generate_password_hash
+from werkzeug.security import check_password_hash
+
 
 app = Flask(__name__)
 cors = CORS (app, origins="*")
+
+#la chiave è stata generata sfruttando il sistema operativo con il codice
+# import secrets;
+# print(secrets.token_hex())
+#
+# come suggerito dalla documentazione di flask
+app.secret_key = 'a421c210278fd00c726cf138acbe3780410109e3857df5b7475d847cd4813a31'
 
 app.config.from_object(__name__)
 
@@ -139,21 +149,23 @@ def get_data():
 
     db = get_db()
     cur = db.cursor()
-    query = 'SELECT username, user_password FROM User WHERE username = ? AND user_password = ?'
-    cur.execute(query, (username, password))
+    cur.execute('SELECT username, user_password FROM User WHERE username = ?', (username,))
 
     # Controlla se la query ha restituito risultati
     user = cur.fetchone()
 
-    if user:
-        # La query ha restituito un risultato, quindi le credenziali sono corrette
-        return jsonify({'message': 'Correct'})
-    else:
+    if user is None:   
         # La query non ha restituito risultati, quindi le credenziali sono errate
         return jsonify({'message': 'Incorrect'})
+    elif not check_password_hash(user["user_password"], password):
+        #le password non coincidono
+        return jsonify({'message': 'Incorrect'})
+    else :
+        # La query ha restituito un risultato, e le credenziali sono corrette
+        return jsonify({'message': 'Correct'})
 
 
-# Aoi per far iscrivere l'utente all'appilicazione
+# Api per far iscrivere l'utente all'appilicazione
 @app.route("/api/signin", methods=['POST'])
 def save_data():
 
@@ -168,7 +180,7 @@ def save_data():
     try:
         db = get_db()
         cur = db.cursor()
-        cur.execute('INSERT INTO User (username, user_password) VALUES (?, ?)', (username, password))
+        cur.execute('INSERT INTO User (username, user_password) VALUES (?, ?)', (username, generate_password_hash(password)))
         db.commit()
         return jsonify({'message': 'Done'})
     
