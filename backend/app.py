@@ -10,11 +10,11 @@ from werkzeug.security import check_password_hash
 app = Flask(__name__)
 cors = CORS (app, origins="*")
 
-#la chiave è stata generata sfruttando il sistema operativo con il codice
+#the secret key is generated through this piece of code:
 # import secrets;
 # print(secrets.token_hex())
 #
-# come suggerito dalla documentazione di flask
+#as suggested from the flask documentation
 app.secret_key = 'a421c210278fd00c726cf138acbe3780410109e3857df5b7475d847cd4813a31'
 
 app.config.from_object(__name__)
@@ -24,44 +24,45 @@ app.config.update(dict(
     SCHEMA=os.path.join(app.root_path, 'schema.sql')
 ))
 
+#connects to the specific sqlite3 database
 def connect_db():
-    """Connects to the specific database."""
     rv = sqlite3.connect(app.config['DATABASE'])
     rv.row_factory = sqlite3.Row
     return rv
 
+#opens a new connection for this context g
 def get_db():
-    """Opens a new database connection if there is none yet for the
-    current application context.
-    """
     if not hasattr(g, 'sqlite_db'):
         g.sqlite_db = connect_db()
     return g.sqlite_db
 
+#this is executed every time the context is teardown, it closes the connection
 @app.teardown_appcontext
 def close_db(error):
-    """Closes the database again at the end of the request."""
     if hasattr(g, 'sqlite_db'):
         g.sqlite_db.close()
 
+#this is the function called in the flask script defined below, it uses the schema to initialize the database
+#IT WILL DROP EVERY TABLE PRESENT IF CALLED
 def init_db():
     db = get_db()
     with app.open_resource(app.config['SCHEMA'], mode='r') as f:
         db.cursor().executescript(f.read())
     db.commit()
 
+#definition of the flask script, now you can write "flask initdb" in the terminal to initialize the database
 @app.cli.command('initdb')
 def initdb_command():
     """Initializes the database."""
     init_db()
     print('Initialized the database.')
 
- #--- INIZIO API ---
+ #--- API ---
     
-# Api per invio delle classifiche
+#sending the scoreboards data
 @app.route("/api/score/<int:number>", methods=['GET'])
 def send_score(number):
-    # se il numero passato nell'url è 1 bisogna passare i dati di snake
+    #if the number in the url is equal to 1 we need snake's data
     if number==1:
         try:
             db = get_db()
@@ -83,11 +84,10 @@ def send_score(number):
             return jsonify(scores)
         
         except Exception as e:
-            # Gestione dell'errore durante l'inserimento
             return jsonify({'message': 'Error: {}'.format(str(e))})
 
     
-     # se è 2 quelli di flappy
+     #if number is 2, flappy bird's data is sent
     elif number==2:
         try:
             db = get_db()
@@ -109,13 +109,13 @@ def send_score(number):
             return jsonify(scores)
         
         except Exception as e:
-            # Gestione dell'errore durante l'inserimento
             return jsonify({'message': 'Error: {}'.format(str(e))})
     else:
+        #otherwise something happened
         return "invalid number provided"
     
 
-#Api per ricevere il punteggio della partita e aggiornare il db
+#receivin the match data and inserting it into the database
 @app.route("/api/game", methods=['POST', 'GET'])
 def receive_game_score():
     data = request.get_json()
@@ -123,7 +123,6 @@ def receive_game_score():
     score = data['score']
     gameId = data['gameId']
 
-    print(f"{playername} {score} {gameId}")
     try:
         db = get_db()
         cur = db.cursor()
@@ -132,51 +131,48 @@ def receive_game_score():
         return jsonify({'message': 'Done'})
     
     except Exception as e:
-        # Gestione dell'errore durante l'inserimento
         return jsonify({'message': 'Error: {}'.format(str(e))})
 
 
-#Api per controllare che utente possa loggare
+#login control
 @app.route("/api/login", methods =['POST'])
 def get_data():
-    # Ottengo nome utente e password dal client
+    #client sends username and password
     data = request.get_json()
     username = data['username']
     password = data['password']
 
-    # Debug
-    print(f"username: {username}, password: {password}")
 
     db = get_db()
     cur = db.cursor()
+    #extract the password hash from the database if present
     cur.execute('SELECT username, user_password FROM User WHERE username = ?', (username,))
 
-    # Controlla se la query ha restituito risultati
     user = cur.fetchone()
 
     if user is None:   
-        # La query non ha restituito risultati, quindi le credenziali sono errate
+        #the query result is empty, the credentials are worng!
         return jsonify({'message': 'Incorrect'})
     elif not check_password_hash(user["user_password"], password):
-        #le password non coincidono
+        #check_password_hash() returned false! the passwords do not match
         return jsonify({'message': 'Incorrect'})
     else :
-        # La query ha restituito un risultato, e le credenziali sono corrette
+        #everything is good, the user can login
         return jsonify({'message': 'Correct'})
 
 
-# Api per far iscrivere l'utente all'appilicazione
+#sign in a new user
 @app.route("/api/signin", methods=['POST'])
 def save_data():
 
-    #ottengo nome utente e password dal client
+    #get username and password from client
     data = request.get_json()
     username = data['username']
     password = data['password']
 
-    #debug
-    print(f"username: {username}, password: {password}")
 
+    #since username is a primary key for the User table no duplicates are allowed, so no check is needed, if the username is invalid
+    #the exception will be executed
     try:
         db = get_db()
         cur = db.cursor()
@@ -185,7 +181,7 @@ def save_data():
         return jsonify({'message': 'Done'})
     
     except Exception as e:
-        # Gestione dell'errore durante l'inserimento
+        # the username was already used
         return jsonify({'message': 'Error: {}'.format(str(e))})
 
     

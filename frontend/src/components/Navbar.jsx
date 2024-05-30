@@ -7,14 +7,14 @@ import { useEffect } from "react";
 const Navbar = ({username, setUsername}) => {
 
   const location = useLocation();
-  
+    //delete the variables saved in local storage by the login function
     function logOut(){
         localStorage.removeItem("username");
         localStorage.removeItem("password");
     }
 
+    // Retrieve username from localStorage when component mounts
     useEffect(() => {
-      // Retrieve username from localStorage when component mounts
       const savedUsername = localStorage.getItem('username');
       if (savedUsername != "default") {
         setUsername(savedUsername);

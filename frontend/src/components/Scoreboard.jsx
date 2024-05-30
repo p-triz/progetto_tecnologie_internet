@@ -11,6 +11,7 @@ const Scoreboard = ({username, setUsername}) => {
   const location = useLocation();
   const [gameName, setGameName] = useState('');
 
+  //this is to load the correct scoreboard in each page
   useEffect(() => {
     if (location.pathname.endsWith("/1")) {
       setGameName("Snake");
@@ -18,7 +19,8 @@ const Scoreboard = ({username, setUsername}) => {
       setGameName("Flappy");
     }
   }, [location.pathname]);
-
+  
+  //this gets the data from the database when the component is mounted
   useEffect(() => {
     async function fetchData() {
         let response;

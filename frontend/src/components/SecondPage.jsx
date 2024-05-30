@@ -11,7 +11,7 @@ const SecondPage = ({username, setUsername}) => {
   const description2 = 'Make your bird fly avoiding obstacles';
   const gameOneName = 'Snake';
   const gameTwoName = 'Flappy Bird';
-
+ //this component contains just the structure of the main page of the site.
   return (
     <div className="parentDiv">
       <div className="container">

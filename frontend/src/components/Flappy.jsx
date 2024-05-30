@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import './FlappyBird.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+
+//the function to comunicate the score to the server
 async function sendScore(playerName,score){
     const gameId = '2';
     try {
@@ -13,6 +15,7 @@ async function sendScore(playerName,score){
   }
 
 const FlappyBird = () => {
+    //game variables and state
     const [birdPosition, setBirdPosition] = useState({ x: 50, y: 200 });
     const [pipes, setPipes] = useState([]);
     const [gameOver, setGameOver] = useState(false);
@@ -29,6 +32,7 @@ const FlappyBird = () => {
     };
 
     const restartGame = () =>{
+        //starting values
             setBirdPosition({ x: 50, y: 200 });
             setPipes([]);
             setGameOver(false);
@@ -81,16 +85,17 @@ const FlappyBird = () => {
  
         // Check if bird is out of the screen vertically
         if (birdBottom > 800 || birdTop < -170) {
-            // Bird is out of bounds, end the game
             setGameOver(true);
             setGameStarted(false);
         }
     };
  
+    //every useEffect is run each time the component is mounted
     useEffect(() => {
         checkCollision();
     }, [birdPosition, pipes, gameOver]);
  
+    //in this case an interval is set and later clear every x milliseconds
     useEffect(() => {
         const gravity = setInterval(() => {
             setBirdPosition((prev) => ({ ...prev, y: prev.y + 3 }));

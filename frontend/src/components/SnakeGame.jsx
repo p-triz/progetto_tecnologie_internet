@@ -14,6 +14,7 @@ async function sendScore(playerName,score){
 }
 
 const SnakeGame = () => {
+  //game variables and state
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [direction, setDirection] = useState('right');
   const [apple, setApple] = useState({ x: 5, y: 5 });
@@ -25,6 +26,7 @@ const SnakeGame = () => {
   const gridSize = 20;
   const canvasRef = useRef(null);
 
+  //this function draws the canvas and fills the right cells where the snake is located and those where the apples are.
   const draw = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
@@ -47,6 +49,7 @@ const SnakeGame = () => {
     context.strokeRect(apple.y * gridSize, apple.x * gridSize, gridSize, gridSize);
   };
 
+  //moving the snake each frame and grow it when it eats apples
   const move = () => {
     const head = { x: snake[0].x, y: snake[0].y };
     switch (direction) {
@@ -84,6 +87,7 @@ const SnakeGame = () => {
     checkCollision(head);
   };
 
+  //self explanatory, it checks for collisions with the borders of the canvas or with the snake itself
   const checkCollision = (head) => {
     if (head.x < 0 || head.y < 0 || head.x >= canvasRef.current.height / gridSize || head.y >= canvasRef.current.width / gridSize) {
       setGameOver(true);
@@ -97,6 +101,7 @@ const SnakeGame = () => {
     }
   };
 
+  //listening for the player input
   const handleKeyDown = (event) => {
     switch (event.keyCode) {
       case 38:
@@ -116,6 +121,7 @@ const SnakeGame = () => {
     }
   };
 
+  //the game setup, it is run each time the component is mounted
   useEffect(() => {
     const canvas = canvasRef.current;
     const canvasWidth = 400;
@@ -134,6 +140,7 @@ const SnakeGame = () => {
     };
   }, []);
 
+  //this interval sets the "framerate" the game is run at
   useEffect(() => {
     const interval = setInterval(() => {
       if (!gameOver) {
@@ -149,6 +156,7 @@ const SnakeGame = () => {
 
   
 
+  //restart the game
   const handlePlayAgain = () => {
     setSnake([{ x: 10, y: 10 }]);
     setDirection('right');

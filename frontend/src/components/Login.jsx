@@ -9,13 +9,13 @@ import axios from 'axios';
 const Login = ({ username, password, setUsername, setPassword}) => {
   const navigate = useNavigate();
 
+  //comunication with the backend to send the login information
   async function sendDataLogin(userName, userPassword){
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/login', { username: userName, password: userPassword });
       if (response.data.message === "Incorrect") {
-        // Mostra un messaggio di avviso
+
         alert("Credenziali errate. Riprova.");
-        // Naviga alla pagina '/'
         navigate("/") 
     } else{
       navigate("/Home")
@@ -26,6 +26,7 @@ const Login = ({ username, password, setUsername, setPassword}) => {
     
   }
   
+  //comunication with the backend to sign in a new user
   async function sendDataSignin(userName, userPassword){
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/signin', { username: userName, password: userPassword });
@@ -35,6 +36,7 @@ const Login = ({ username, password, setUsername, setPassword}) => {
     }
   }
 
+  //verification of the login based on the backend response
   const handleLogin = (event) => {
     event.preventDefault(); 
     const currUser = event.target.username.value;

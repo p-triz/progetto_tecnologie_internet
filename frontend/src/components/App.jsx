@@ -9,10 +9,11 @@ import Error from './Error';
 import { useState } from 'react';
 
 const App = () => {
+  //these variables are saved in the local memory and will be deleted once the user logs out or closes the browser
   const [username, setUsername] = useState('default');
   const [password, setPassword] = useState('default');
 
- 
+  //definition of the possible routes of the application
   return (
     <div>
       <BrowserRouter>
