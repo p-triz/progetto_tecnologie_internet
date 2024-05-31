@@ -1,62 +1,25 @@
-# progetto_tecnologie_internet
-CLIENT:
+# Online Game Platform
 
--inviare il pacchetto di login del tipo (nome utente + hash della password);
+## Dependecies
+* install node
+* install python
 
--eseguire il codice del gioco scelto che è stato fornito dal server.
-SERVER:
+* npm install
+* npm i react-router-dom
+* npm i axios
 
--gestire un database che colleghi gli account dei giocatori ai punteggi da loro accumulati nei differenti videogiochi;
-
--fornire le pagine al client una volta richieste.
-
-
-STRUTTURA SITO:
-
--pagina di login iniziale con opzione per la creazione di un account.
-    dopo login:
-    -pagina di visione classifiche e statistiche.
-    -pagina di selezione videogioco.
-        dopo selezione:
-        -esecuzione videogioco con comunicazione del punteggio al server alla fine di ogni partita.
-
---FRONT--
-PAGINA DI LOGIN:
-- se hai già l'account login
-    - altrimenti iscrizione
-
-IN ENTRAMBI I CASI VAI A FINIRE NELLA PAGINA 
-- scelta giochi
-- visualizzazione delle classifiche
-
-SE VIENE SCELTO UN GIOCHO (2 GIOCHI)
-- si apre la pagina relativa al gioco (gestita lato client)
-- quando gioco finisce
-      - comunicazione risultato al server
-      - try again (cerchiamo di gestirlo lato client)
-      - torna al menu di selezione
-
---BACK--
-PAGINA DI LOGIN
-- prendere i dati e controllarli con il db
-- creazione dell'accont con comunicazione db
-
-SCELTA GIOCHI
--redirect alla pagina giusta del gioco
--recuperi i dati e li ordini in maniera descrescente e li mandi al client che li manda a schermo nella classifica
-
-PAGINA GIOCO
-- recuperare il risulato e salvarlo nel db corretto
-- ritornare alla pagina home nel caso utente voglia smettere di giocare
+* pip3 install flask
+* pip3 install Flask-Cors
 
 
---DB--
-1) DB per gli account (nome hash->password)
-2) DB GIOCO 1 (nome punteggio data)
-3) DB PER GIOCO 2 (nome punteggio data)
+## How to run the code
+inside the backend folder you need to execute in the terminal:
+* flask initdb (to initialize the database)
+* python3 app.py (to run the server)
 
+Now inside the frontend folder you need to execute in the terminal:
+* npm run dev
 
---TECNOLOGIE--
-
-front: react
-back: flask
+## How it works
+Once you've logged in you can play few games and see the scoreboard of those games.
+The frontend (done with ReactJS) communicates with the backend (written in Flask Python) to send and receive data that are stored into a MySql database (SQLite3).
