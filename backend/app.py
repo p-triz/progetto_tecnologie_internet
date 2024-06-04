@@ -116,7 +116,7 @@ def send_score(number):
     
 
 #receivin the match data and inserting it into the database
-@app.route("/api/game", methods=['POST', 'GET'])
+@app.route("/api/game", methods=['POST'])
 def receive_game_score():
     data = request.get_json()
     playername = data['playername']

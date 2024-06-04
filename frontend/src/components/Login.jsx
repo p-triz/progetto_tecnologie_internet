@@ -30,7 +30,7 @@ const Login = ({ username, password, setUsername, setPassword}) => {
   async function sendDataSignin(userName, userPassword){
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/signin', { username: userName, password: userPassword });
-      response.data.message ==="Done" ?  navigate("/Home") : alert("error")
+      response.data.message ==="Done" ?  navigate("/Home") : alert("Username already exists")
     } catch (error) {
       console.error(error);
     }
