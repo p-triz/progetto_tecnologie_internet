@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.5.28)  31 MAY 2024 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.5.28)  4 JUN 2024 18:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -41,40 +41,47 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
+) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count197
+\float@exts=\toks18
+\float@box=\box51
+\@float@everytoks=\toks19
+\@floatcapt=\box52
 ) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count197
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count198
+\l__pdf_internal_box=\box53
 ) (Relazione.aux)
 \openout1 = `Relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
  (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count198
+\scratchcounter=\count199
 \scratchdimen=\dimen143
-\scratchbox=\box52
-\nofMPsegments=\count199
-\nofMParguments=\count266
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count267
+\scratchbox=\box54
+\nofMPsegments=\count266
+\nofMParguments=\count267
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count268
 \MPscratchDim=\dimen144
-\MPnumerator=\count268
-\makeMPintoPDFobject=\count269
-\everyMPtoPDFconversion=\toks19
+\MPnumerator=\count269
+\makeMPintoPDFobject=\count270
+\everyMPtoPDFconversion=\toks21
 ) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -82,35 +89,117 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
+(Font)              <12> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
+(Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
- (Relazione.toc)
+(Font)              <6> on input line 12.
+ (Relazione.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+)
 \tf@toc=\write3
 \openout3 = `Relazione.toc'.
 
  [1
 
-{/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}] (Relazione.aux)
+{/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}]
+<images/import.png, id=10, 644.4075pt x 370.38374pt>
+File: images/import.png Graphic file (type png)
+<use images/import.png>
+Package pdftex.def Info: images/import.png  used on input line 61.
+(pdftex.def)             Requested size: 310.4979pt x 178.47166pt.
+ [2] [3 <./images/import.png>]
+<images/setup_database1.png, id=20, 636.3775pt x 193.72375pt>
+File: images/setup_database1.png Graphic file (type png)
+<use images/setup_database1.png>
+Package pdftex.def Info: images/setup_database1.png  used on input line 88.
+(pdftex.def)             Requested size: 310.4979pt x 94.5205pt.
+<images/connessione_db.png, id=21, 384.43625pt x 120.45pt>
+File: images/connessione_db.png Graphic file (type png)
+<use images/connessione_db.png>
+Package pdftex.def Info: images/connessione_db.png  used on input line 96.
+(pdftex.def)             Requested size: 310.4979pt x 97.2901pt.
+<images/apertura_connessione_db.png, id=22, 338.26375pt x 120.45pt>
+File: images/apertura_connessione_db.png Graphic file (type png)
+<use images/apertura_connessione_db.png>
+Package pdftex.def Info: images/apertura_connessione_db.png  used on input line 104.
+(pdftex.def)             Requested size: 310.4979pt x 110.56721pt.
+ [4 <./images/setup_database1.png> <./images/connessione_db.png>]
+<images/chiusura_connessione_db.png, id=28, 601.24625pt x 110.4125pt>
+File: images/chiusura_connessione_db.png Graphic file (type png)
+<use images/chiusura_connessione_db.png>
+Package pdftex.def Info: images/chiusura_connessione_db.png  used on input line 112.
+(pdftex.def)             Requested size: 310.4979pt x 57.02058pt.
+<images/inzializzazione_db.png, id=29, 835.12pt x 154.5775pt>
+File: images/inzializzazione_db.png Graphic file (type png)
+<use images/inzializzazione_db.png>
+Package pdftex.def Info: images/inzializzazione_db.png  used on input line 120.
+(pdftex.def)             Requested size: 310.4979pt x 57.47345pt.
+<images/inizializzazione_linea_comando.png, id=30, 825.0825pt x 145.54375pt>
+File: images/inizializzazione_linea_comando.png Graphic file (type png)
+<use images/inizializzazione_linea_comando.png>
+Package pdftex.def Info: images/inizializzazione_linea_comando.png  used on input line 131.
+(pdftex.def)             Requested size: 310.4979pt x 54.77197pt.
+ [5 <./images/apertura_connessione_db.png> <./images/chiusura_connessione_db.png> <./images/inzializzazione_db.png>]
+<images/invio_classifica1.png, id=37, 717.68124pt x 536.0025pt>
+File: images/invio_classifica1.png Graphic file (type png)
+<use images/invio_classifica1.png>
+Package pdftex.def Info: images/invio_classifica1.png  used on input line 146.
+(pdftex.def)             Requested size: 310.4979pt x 231.89967pt.
+<images/invio_classifica2.png, id=38, 693.59125pt x 544.0325pt>
+File: images/invio_classifica2.png Graphic file (type png)
+<use images/invio_classifica2.png>
+Package pdftex.def Info: images/invio_classifica2.png  used on input line 151.
+(pdftex.def)             Requested size: 310.4979pt x 243.55057pt.
+ [6 <./images/inizializzazione_linea_comando.png> <./images/invio_classifica1.png>]
+<images/salvare_punteggio_partite.png, id=44, 885.3075pt x 384.43625pt>
+File: images/salvare_punteggio_partite.png Graphic file (type png)
+<use images/salvare_punteggio_partite.png>
+Package pdftex.def Info: images/salvare_punteggio_partite.png  used on input line 167.
+(pdftex.def)             Requested size: 310.4979pt x 134.8304pt.
+ [7 <./images/invio_classifica2.png>]
+<images/controllo_login.png, id=50, 711.65875pt x 525.965pt>
+File: images/controllo_login.png Graphic file (type png)
+<use images/controllo_login.png>
+Package pdftex.def Info: images/controllo_login.png  used on input line 176.
+(pdftex.def)             Requested size: 310.4979pt x 229.4751pt.
+ [8 <./images/salvare_punteggio_partite.png> <./images/controllo_login.png>]
+<images/iscrizione_nuovo_utente.png, id=56, 1014.79124pt x 477.785pt>
+File: images/iscrizione_nuovo_utente.png Graphic file (type png)
+<use images/iscrizione_nuovo_utente.png>
+Package pdftex.def Info: images/iscrizione_nuovo_utente.png  used on input line 188.
+(pdftex.def)             Requested size: 310.4979pt x 146.18715pt.
+<images/esecuzione_app.png, id=57, 265.99374pt x 67.25125pt>
+File: images/esecuzione_app.png Graphic file (type png)
+<use images/esecuzione_app.png>
+Package pdftex.def Info: images/esecuzione_app.png  used on input line 197.
+(pdftex.def)             Requested size: 310.4979pt x 78.5102pt.
+<images/schema_sql.png, id=58, 407.5225pt x 559.08875pt>
+File: images/schema_sql.png Graphic file (type png)
+<use images/schema_sql.png>
+Package pdftex.def Info: images/schema_sql.png  used on input line 208.
+(pdftex.def)             Requested size: 310.4979pt x 425.99529pt.
+ [9 <./images/iscrizione_nuovo_utente.png> <./images/esecuzione_app.png>] [10 <./images/schema_sql.png>] [11] (Relazione.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-05-08>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1297 strings out of 476247
- 22853 string characters out of 2788098
- 1926904 words of memory out of 3000000
- 23545 multiletter control sequences out of 15000+600000
- 562017 words of font info for 49 fonts, out of 8000000 for 9000
+ 1482 strings out of 476247
+ 27805 string characters out of 2788098
+ 1934904 words of memory out of 3000000
+ 23725 multiletter control sequences out of 15000+600000
+ 562659 words of font info for 51 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 57i,5n,65p,266b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
-</Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Relazione.pdf (1 page, 53144 bytes).
+ 57i,7n,65p,412b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Relazione.pdf (11 pages, 943922 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

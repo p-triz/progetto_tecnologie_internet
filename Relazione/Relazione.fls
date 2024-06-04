@@ -21,6 +21,8 @@ INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/float/float.sty
+INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/float/float.sty
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./Relazione.aux
@@ -52,9 +54,111 @@ INPUT ./Relazione.toc
 INPUT Relazione.toc
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm
 OUTPUT Relazione.toc
+INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT Relazione.pdf
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map
+INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT ./images/import.png
+INPUT ./images/import.png
+INPUT ./images/import.png
+INPUT ./images/import.png
+INPUT ./images/import.png
+INPUT ./images/import.png
+INPUT ./images/import.png
+INPUT ./images/setup_database1.png
+INPUT ./images/setup_database1.png
+INPUT ./images/setup_database1.png
+INPUT ./images/setup_database1.png
+INPUT ./images/setup_database1.png
+INPUT ./images/setup_database1.png
+INPUT ./images/setup_database1.png
+INPUT ./images/connessione_db.png
+INPUT ./images/connessione_db.png
+INPUT ./images/connessione_db.png
+INPUT ./images/connessione_db.png
+INPUT ./images/connessione_db.png
+INPUT ./images/connessione_db.png
+INPUT ./images/connessione_db.png
+INPUT ./images/apertura_connessione_db.png
+INPUT ./images/apertura_connessione_db.png
+INPUT ./images/apertura_connessione_db.png
+INPUT ./images/apertura_connessione_db.png
+INPUT ./images/apertura_connessione_db.png
+INPUT ./images/apertura_connessione_db.png
+INPUT ./images/apertura_connessione_db.png
+INPUT ./images/chiusura_connessione_db.png
+INPUT ./images/chiusura_connessione_db.png
+INPUT ./images/chiusura_connessione_db.png
+INPUT ./images/chiusura_connessione_db.png
+INPUT ./images/chiusura_connessione_db.png
+INPUT ./images/chiusura_connessione_db.png
+INPUT ./images/chiusura_connessione_db.png
+INPUT ./images/inzializzazione_db.png
+INPUT ./images/inzializzazione_db.png
+INPUT ./images/inzializzazione_db.png
+INPUT ./images/inzializzazione_db.png
+INPUT ./images/inzializzazione_db.png
+INPUT ./images/inzializzazione_db.png
+INPUT ./images/inzializzazione_db.png
+INPUT ./images/inizializzazione_linea_comando.png
+INPUT ./images/inizializzazione_linea_comando.png
+INPUT ./images/inizializzazione_linea_comando.png
+INPUT ./images/inizializzazione_linea_comando.png
+INPUT ./images/inizializzazione_linea_comando.png
+INPUT ./images/inizializzazione_linea_comando.png
+INPUT ./images/inizializzazione_linea_comando.png
+INPUT ./images/invio_classifica1.png
+INPUT ./images/invio_classifica1.png
+INPUT ./images/invio_classifica1.png
+INPUT ./images/invio_classifica1.png
+INPUT ./images/invio_classifica1.png
+INPUT ./images/invio_classifica1.png
+INPUT ./images/invio_classifica1.png
+INPUT ./images/invio_classifica2.png
+INPUT ./images/invio_classifica2.png
+INPUT ./images/invio_classifica2.png
+INPUT ./images/invio_classifica2.png
+INPUT ./images/invio_classifica2.png
+INPUT ./images/invio_classifica2.png
+INPUT ./images/invio_classifica2.png
+INPUT ./images/salvare_punteggio_partite.png
+INPUT ./images/salvare_punteggio_partite.png
+INPUT ./images/salvare_punteggio_partite.png
+INPUT ./images/salvare_punteggio_partite.png
+INPUT ./images/salvare_punteggio_partite.png
+INPUT ./images/salvare_punteggio_partite.png
+INPUT ./images/salvare_punteggio_partite.png
+INPUT ./images/controllo_login.png
+INPUT ./images/controllo_login.png
+INPUT ./images/controllo_login.png
+INPUT ./images/controllo_login.png
+INPUT ./images/controllo_login.png
+INPUT ./images/controllo_login.png
+INPUT ./images/controllo_login.png
+INPUT ./images/iscrizione_nuovo_utente.png
+INPUT ./images/iscrizione_nuovo_utente.png
+INPUT ./images/iscrizione_nuovo_utente.png
+INPUT ./images/iscrizione_nuovo_utente.png
+INPUT ./images/iscrizione_nuovo_utente.png
+INPUT ./images/iscrizione_nuovo_utente.png
+INPUT ./images/iscrizione_nuovo_utente.png
+INPUT ./images/esecuzione_app.png
+INPUT ./images/esecuzione_app.png
+INPUT ./images/esecuzione_app.png
+INPUT ./images/esecuzione_app.png
+INPUT ./images/esecuzione_app.png
+INPUT ./images/esecuzione_app.png
+INPUT ./images/esecuzione_app.png
+INPUT ./images/schema_sql.png
+INPUT ./images/schema_sql.png
+INPUT ./images/schema_sql.png
+INPUT ./images/schema_sql.png
+INPUT ./images/schema_sql.png
+INPUT ./images/schema_sql.png
+INPUT ./images/schema_sql.png
 INPUT Relazione.aux
+INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
+INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
