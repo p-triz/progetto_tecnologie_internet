@@ -1,67 +1,58 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.2)  5 JUN 2024 18:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.5.28)  5 JUN 2024 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Relazione.tex
-(./Relazione.tex
+**/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex
+(/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex
 LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2024-05-08>
+(/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+(/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count188
-\c@section=\count189
-\c@subsection=\count190
-\c@subsubsection=\count191
-\c@paragraph=\count192
-\c@subparagraph=\count193
-\c@figure=\count194
-\c@table=\count195
+\c@part=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\c@figure=\count195
+\c@table=\count196
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+ (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+ (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+ (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count196
+\c@float@type=\count197
 \float@exts=\toks18
 \float@box=\box51
 \@float@everytoks=\toks19
 \@floatcapt=\box52
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count197
+) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count198
 \l__pdf_internal_box=\box53
-)
-(./Relazione.aux)
+) (Relazione.aux)
 \openout1 = `Relazione.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -78,28 +69,24 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
-
-(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count198
+\scratchcounter=\count199
 \scratchdimen=\dimen143
 \scratchbox=\box54
-\nofMPsegments=\count199
-\nofMParguments=\count266
+\nofMPsegments=\count266
+\nofMParguments=\count267
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count267
+\MPscratchCnt=\count268
 \MPscratchDim=\dimen144
-\MPnumerator=\count268
-\makeMPintoPDFobject=\count269
+\MPnumerator=\count269
+\makeMPintoPDFobject=\count270
 \everyMPtoPDFconversion=\toks21
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 12.
@@ -107,8 +94,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 12.
-
-(./Relazione.toc
+ (Relazione.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -119,148 +105,136 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<images/Card.png, id=11, 345.29pt x 377.41pt>
+{/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}]
+<images/Card.png, id=10, 345.29pt x 377.41pt>
 File: images/Card.png Graphic file (type png)
 <use images/Card.png>
-Package pdftex.def Info: images/Card.png  used on input line 62.
+Package pdftex.def Info: images/Card.png  used on input line 57.
 (pdftex.def)             Requested size: 310.4979pt x 339.38367pt.
- [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
-c}]
-<images/sign_in.png, id=17, 402.50375pt x 362.35374pt>
+ [2]
+<images/sign_in.png, id=16, 402.50375pt x 362.35374pt>
 File: images/sign_in.png Graphic file (type png)
 <use images/sign_in.png>
-Package pdftex.def Info: images/sign_in.png  used on input line 72.
+Package pdftex.def Info: images/sign_in.png  used on input line 67.
 (pdftex.def)             Requested size: 310.4979pt x 279.52745pt.
  [3 <./images/Card.png>]
-<images/handleLogin.png, id=22, 844.15375pt x 167.62625pt>
+<images/handleLogin.png, id=21, 844.15375pt x 167.62625pt>
 File: images/handleLogin.png Graphic file (type png)
 <use images/handleLogin.png>
-Package pdftex.def Info: images/handleLogin.png  used on input line 79.
+Package pdftex.def Info: images/handleLogin.png  used on input line 74.
 (pdftex.def)             Requested size: 310.4979pt x 61.65753pt.
-<images/Navbar.png, id=23, 1325.95375pt x 70.2625pt>
+<images/Navbar.png, id=22, 1325.95375pt x 70.2625pt>
 File: images/Navbar.png Graphic file (type png)
 <use images/Navbar.png>
-Package pdftex.def Info: images/Navbar.png  used on input line 92.
+Package pdftex.def Info: images/Navbar.png  used on input line 87.
 (pdftex.def)             Requested size: 310.4979pt x 16.45271pt.
  [4 <./images/sign_in.png> <./images/handleLogin.png>]
-<images/Scoreboard.png, id=29, 855.195pt x 434.62375pt>
+<images/Scoreboard.png, id=28, 855.195pt x 434.62375pt>
 File: images/Scoreboard.png Graphic file (type png)
 <use images/Scoreboard.png>
-Package pdftex.def Info: images/Scoreboard.png  used on input line 103.
+Package pdftex.def Info: images/Scoreboard.png  used on input line 98.
 (pdftex.def)             Requested size: 310.4979pt x 157.79742pt.
-<images/import.png, id=30, 644.4075pt x 370.38374pt>
+ [5 <./images/Navbar.png> <./images/Scoreboard.png>]
+<images/Flappy_variables.png, id=34, 511.9125pt x 149.55875pt>
+File: images/Flappy_variables.png Graphic file (type png)
+<use images/Flappy_variables.png>
+Package pdftex.def Info: images/Flappy_variables.png  used on input line 119.
+(pdftex.def)             Requested size: 310.4979pt x 90.71495pt.
+<images/import.png, id=35, 644.4075pt x 370.38374pt>
 File: images/import.png Graphic file (type png)
 <use images/import.png>
-Package pdftex.def Info: images/import.png  used on input line 123.
+Package pdftex.def Info: images/import.png  used on input line 129.
 (pdftex.def)             Requested size: 310.4979pt x 178.47166pt.
- [5 <./images/Navbar.png> <./images/Scoreboard.png>] [6 <./images/import.png>]
-<images/setup_database1.png, id=40, 636.3775pt x 193.72375pt>
+ [6 <./images/Flappy_variables.png> <./images/import.png>]
+<images/setup_database1.png, id=41, 636.3775pt x 193.72375pt>
 File: images/setup_database1.png Graphic file (type png)
 <use images/setup_database1.png>
-Package pdftex.def Info: images/setup_database1.png  used on input line 150.
+Package pdftex.def Info: images/setup_database1.png  used on input line 156.
 (pdftex.def)             Requested size: 310.4979pt x 94.5205pt.
-<images/connessione_db.png, id=41, 384.43625pt x 120.45pt>
+<images/connessione_db.png, id=42, 384.43625pt x 120.45pt>
 File: images/connessione_db.png Graphic file (type png)
 <use images/connessione_db.png>
-Package pdftex.def Info: images/connessione_db.png  used on input line 158.
+Package pdftex.def Info: images/connessione_db.png  used on input line 164.
 (pdftex.def)             Requested size: 310.4979pt x 97.2901pt.
-<images/apertura_connessione_db.png, id=42, 338.26375pt x 120.45pt>
+ [7 <./images/setup_database1.png>]
+<images/apertura_connessione_db.png, id=48, 338.26375pt x 120.45pt>
 File: images/apertura_connessione_db.png Graphic file (type png)
 <use images/apertura_connessione_db.png>
-Package pdftex.def Info: images/apertura_connessione_db.png  used on input line
- 166.
+Package pdftex.def Info: images/apertura_connessione_db.png  used on input line 172.
 (pdftex.def)             Requested size: 310.4979pt x 110.56721pt.
- [7 <./images/setup_database1.png> <./images/connessione_db.png>]
 <images/chiusura_connessione_db.png, id=49, 601.24625pt x 110.4125pt>
 File: images/chiusura_connessione_db.png Graphic file (type png)
 <use images/chiusura_connessione_db.png>
-Package pdftex.def Info: images/chiusura_connessione_db.png  used on input line
- 174.
+Package pdftex.def Info: images/chiusura_connessione_db.png  used on input line 180.
 (pdftex.def)             Requested size: 310.4979pt x 57.02058pt.
 <images/inzializzazione_db.png, id=50, 835.12pt x 154.5775pt>
 File: images/inzializzazione_db.png Graphic file (type png)
 <use images/inzializzazione_db.png>
-Package pdftex.def Info: images/inzializzazione_db.png  used on input line 182.
-
+Package pdftex.def Info: images/inzializzazione_db.png  used on input line 188.
 (pdftex.def)             Requested size: 310.4979pt x 57.47345pt.
-<images/inizializzazione_linea_comando.png, id=51, 825.0825pt x 145.54375pt>
+ [8 <./images/connessione_db.png> <./images/apertura_connessione_db.png> <./images/chiusura_connessione_db.png>]
+<images/inizializzazione_linea_comando.png, id=57, 825.0825pt x 145.54375pt>
 File: images/inizializzazione_linea_comando.png Graphic file (type png)
 <use images/inizializzazione_linea_comando.png>
-Package pdftex.def Info: images/inizializzazione_linea_comando.png  used on inp
-ut line 193.
+Package pdftex.def Info: images/inizializzazione_linea_comando.png  used on input line 199.
 (pdftex.def)             Requested size: 310.4979pt x 54.77197pt.
-
-[8 <./images/apertura_connessione_db.png> <./images/chiusura_connessione_db.png
-> <./images/inzializzazione_db.png>]
 <images/invio_classifica1.png, id=58, 717.68124pt x 536.0025pt>
 File: images/invio_classifica1.png Graphic file (type png)
 <use images/invio_classifica1.png>
-Package pdftex.def Info: images/invio_classifica1.png  used on input line 208.
+Package pdftex.def Info: images/invio_classifica1.png  used on input line 214.
 (pdftex.def)             Requested size: 310.4979pt x 231.89967pt.
-<images/invio_classifica2.png, id=59, 693.59125pt x 544.0325pt>
+ [9 <./images/inzializzazione_db.png> <./images/inizializzazione_linea_comando.png>]
+<images/invio_classifica2.png, id=64, 693.59125pt x 544.0325pt>
 File: images/invio_classifica2.png Graphic file (type png)
 <use images/invio_classifica2.png>
-Package pdftex.def Info: images/invio_classifica2.png  used on input line 213.
+Package pdftex.def Info: images/invio_classifica2.png  used on input line 219.
 (pdftex.def)             Requested size: 310.4979pt x 243.55057pt.
- [9 <./images/inizializzazione_linea_comando.png> <./images/invio_classifica1.p
-ng>]
-<images/salvare_punteggio_partite.png, id=65, 885.3075pt x 384.43625pt>
+ [10 <./images/invio_classifica1.png> <./images/invio_classifica2.png>]
+<images/salvare_punteggio_partite.png, id=70, 885.3075pt x 384.43625pt>
 File: images/salvare_punteggio_partite.png Graphic file (type png)
 <use images/salvare_punteggio_partite.png>
-Package pdftex.def Info: images/salvare_punteggio_partite.png  used on input li
-ne 229.
+Package pdftex.def Info: images/salvare_punteggio_partite.png  used on input line 235.
 (pdftex.def)             Requested size: 310.4979pt x 134.8304pt.
- [10 <./images/invio_classifica2.png>]
-<images/controllo_login.png, id=70, 711.65875pt x 525.965pt>
+<images/controllo_login.png, id=71, 711.65875pt x 525.965pt>
 File: images/controllo_login.png Graphic file (type png)
 <use images/controllo_login.png>
-Package pdftex.def Info: images/controllo_login.png  used on input line 238.
+Package pdftex.def Info: images/controllo_login.png  used on input line 244.
 (pdftex.def)             Requested size: 310.4979pt x 229.4751pt.
-
-[11 <./images/salvare_punteggio_partite.png> <./images/controllo_login.png>]
+ [11 <./images/salvare_punteggio_partite.png>]
 <images/iscrizione_nuovo_utente.png, id=76, 1014.79124pt x 477.785pt>
 File: images/iscrizione_nuovo_utente.png Graphic file (type png)
 <use images/iscrizione_nuovo_utente.png>
-Package pdftex.def Info: images/iscrizione_nuovo_utente.png  used on input line
- 250.
+Package pdftex.def Info: images/iscrizione_nuovo_utente.png  used on input line 256.
 (pdftex.def)             Requested size: 310.4979pt x 146.18715pt.
-<images/esecuzione_app.png, id=77, 265.99374pt x 67.25125pt>
+ [12 <./images/controllo_login.png> <./images/iscrizione_nuovo_utente.png>]
+<images/esecuzione_app.png, id=82, 265.99374pt x 67.25125pt>
 File: images/esecuzione_app.png Graphic file (type png)
 <use images/esecuzione_app.png>
-Package pdftex.def Info: images/esecuzione_app.png  used on input line 259.
+Package pdftex.def Info: images/esecuzione_app.png  used on input line 265.
 (pdftex.def)             Requested size: 310.4979pt x 78.5102pt.
-<images/schema_sql.png, id=78, 407.5225pt x 559.08875pt>
+<images/schema_sql.png, id=83, 407.5225pt x 559.08875pt>
 File: images/schema_sql.png Graphic file (type png)
 <use images/schema_sql.png>
-Package pdftex.def Info: images/schema_sql.png  used on input line 270.
+Package pdftex.def Info: images/schema_sql.png  used on input line 276.
 (pdftex.def)             Requested size: 310.4979pt x 425.99529pt.
-
-[12 <./images/iscrizione_nuovo_utente.png> <./images/esecuzione_app.png>]
-[13 <./images/schema_sql.png>] [14] (./Relazione.aux)
+ [13 <./images/esecuzione_app.png>] [14 <./images/schema_sql.png>] [15] (Relazione.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
+L3 programming layer <2024-05-08>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1521 strings out of 474116
- 27055 string characters out of 5743683
- 1937187 words of memory out of 5000000
- 23909 multiletter control sequences out of 15000+600000
+ 1525 strings out of 476247
+ 28941 string characters out of 2788098
+ 1937904 words of memory out of 3000000
+ 23768 multiletter control sequences out of 15000+600000
  562659 words of font info for 51 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 57i,7n,65p,353b,230s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Relazione.pdf (14 pages, 1113533 bytes).
+ 0 hyphenation exceptions out of 8191
+ 57i,7n,65p,401b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Relazione.pdf (15 pages, 1169874 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
