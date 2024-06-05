@@ -184,6 +184,16 @@ INPUT ./images/iscrizione_nuovo_utente.png
 INPUT ./images/iscrizione_nuovo_utente.png
 INPUT ./images/iscrizione_nuovo_utente.png
 INPUT ./images/iscrizione_nuovo_utente.png
+<<<<<<< HEAD
+=======
+INPUT ./images/game_info.png
+INPUT ./images/game_info.png
+INPUT ./images/game_info.png
+INPUT ./images/game_info.png
+INPUT ./images/game_info.png
+INPUT ./images/game_info.png
+INPUT ./images/game_info.png
+>>>>>>> cambio_db
 INPUT ./images/esecuzione_app.png
 INPUT ./images/esecuzione_app.png
 INPUT ./images/esecuzione_app.png
@@ -191,6 +201,7 @@ INPUT ./images/esecuzione_app.png
 INPUT ./images/esecuzione_app.png
 INPUT ./images/esecuzione_app.png
 INPUT ./images/esecuzione_app.png
+<<<<<<< HEAD
 INPUT ./images/schema_sql.png
 INPUT ./images/schema_sql.png
 INPUT ./images/schema_sql.png
@@ -198,6 +209,15 @@ INPUT ./images/schema_sql.png
 INPUT ./images/schema_sql.png
 INPUT ./images/schema_sql.png
 INPUT ./images/schema_sql.png
+=======
+INPUT ./images/schema_db.png
+INPUT ./images/schema_db.png
+INPUT ./images/schema_db.png
+INPUT ./images/schema_db.png
+INPUT ./images/schema_db.png
+INPUT ./images/schema_db.png
+INPUT ./images/schema_db.png
+>>>>>>> cambio_db
 INPUT Relazione.aux
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
 INPUT /Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk

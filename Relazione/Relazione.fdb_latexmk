@@ -1,6 +1,11 @@
 # Fdb version 4
+<<<<<<< HEAD
 ["pdflatex"] 1717616517.78875 "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" "Relazione.pdf" "Relazione" 1717616518.98952 0
   "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" 1717616516.13387 14678 5a56acab6c0d11941ee92913e549d6a5 ""
+=======
+["pdflatex"] 1717616420.5303 "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" "Relazione.pdf" "Relazione" 1717616421.78766 0
+  "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" 1717616420.04165 15064 b0e006915eb36f1de55bfbbee15f29a8 ""
+>>>>>>> cambio_db
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1717514596.72303 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1717518088.99646 11548 146df9a3d1b5c2499b1cfad9917472e9 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1716888765.24536 21067800 1e681e4742d08cfeaa7cc24e5283844a ""
@@ -35,9 +40,15 @@
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty" 1716888062.56523 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1716888062.56653 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1716888063.84213 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
+<<<<<<< HEAD
   "Relazione.aux" 1717616518.92248 3464 b557c33316c3f7d4d634a774da5ee7c0 "pdflatex"
   "Relazione.tex" 1717616516.13387 14678 5a56acab6c0d11941ee92913e549d6a5 ""
   "Relazione.toc" 1717616518.92347 2201 fedb21b9ceabc927241e438650154a70 "pdflatex"
+=======
+  "Relazione.aux" 1717616421.72099 3588 2637fe1c7a12eb038a1639aaa034f463 "pdflatex"
+  "Relazione.tex" 1717616420.04165 15064 b0e006915eb36f1de55bfbbee15f29a8 ""
+  "Relazione.toc" 1717616421.722 2284 0553de567a1f4bab672e34b3640c0a1a "pdflatex"
+>>>>>>> cambio_db
   "images/Card.png" 1717607406.48905 45887 13004302c9e10dbe225bbbfcedb69530 ""
   "images/Flappy_variables.png" 1717607406.48941 91144 37e6576fb20dac1e8af106bcdcb12e65 ""
   "images/Navbar.png" 1717607406.48962 40764 e22e0182d4b02b742cec428c1351ab1e ""
@@ -47,6 +58,10 @@
   "images/connessione_db.png" 1717515999.98387 45751 8db9e2c2096a66906c9d53d44498c10e ""
   "images/controllo_login.png" 1717517516.11821 226512 40ee830b796cf0830c73dcd517efee7f ""
   "images/esecuzione_app.png" 1717517731.3248 15782 c8a3d8e7ff71d05c848e446d86afe11c ""
+<<<<<<< HEAD
+=======
+  "images/game_info.png" 1717616198.3521 132005 d35d825d82a33606e2a77e094f03c03f ""
+>>>>>>> cambio_db
   "images/handleLogin.png" 1717607406.49021 100300 8c6438c563f08b25a5cd724f79a63bbf ""
   "images/import.png" 1717514320.55452 58821 c801c07f53f3198ab1d3701bdd0fb36c ""
   "images/inizializzazione_linea_comando.png" 1717516632.98911 61314 48462acab63f76c865dc60e54cb9da20 ""
@@ -55,7 +70,11 @@
   "images/inzializzazione_db.png" 1717516552.25996 75642 ff7e6719518cb01c905a7b8b0f6f71b0 ""
   "images/iscrizione_nuovo_utente.png" 1717517595.42172 210656 2927921044496a1ae4c5f8ec8986daf7 ""
   "images/salvare_punteggio_partite.png" 1717517407.03035 166389 8839b270663b9b944f10d2052445cfed ""
+<<<<<<< HEAD
   "images/schema_sql.png" 1717616516.13542 173013 564372d999d2938e8c749f190bf7e4a0 ""
+=======
+  "images/schema_db.png" 1717616041.80533 193938 7fc1297b0c8e633ae42013bdaa866959 ""
+>>>>>>> cambio_db
   "images/setup_database1.png" 1717515781.38334 85864 950fe03d37a40dfc763c3479dd911ae1 ""
   "images/sign_in.png" 1717607406.49044 49239 339a2afe5aebba1db375804139a07fef ""
   (generated)

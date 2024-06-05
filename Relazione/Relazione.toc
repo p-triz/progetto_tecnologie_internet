@@ -26,5 +26,10 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Salvare il punteggio delle partite}{11}{}%
 \contentsline {subsubsection}{\numberline {3.3.3}Controllo accesso di un utente}{12}{}%
 \contentsline {subsubsection}{\numberline {3.3.4}Iscrizione nuovo utente}{12}{}%
+<<<<<<< HEAD
 \contentsline {subsubsection}{\numberline {3.3.5}Sezione dedicare all'esecuzione dell'app (facoltativa)}{13}{}%
+=======
+\contentsline {subsubsection}{\numberline {3.3.5}Invio informazioni giochi}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}Sezione dedicare all'esecuzione dell'app (facoltativa)}{13}{}%
+>>>>>>> cambio_db
 \contentsline {subsection}{\numberline {3.4}Database}{13}{}%

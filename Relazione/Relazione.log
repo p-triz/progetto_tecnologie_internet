@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.5.28)  5 JUN 2024 21:41
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.5.28)  5 JUN 2024 21:40
+>>>>>>> cambio_db
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -207,6 +211,7 @@ File: images/iscrizione_nuovo_utente.png Graphic file (type png)
 Package pdftex.def Info: images/iscrizione_nuovo_utente.png  used on input line 256.
 (pdftex.def)             Requested size: 310.4979pt x 146.18715pt.
  [12 <./images/controllo_login.png> <./images/iscrizione_nuovo_utente.png>]
+<<<<<<< HEAD
 <images/esecuzione_app.png, id=82, 265.99374pt x 67.25125pt>
 File: images/esecuzione_app.png Graphic file (type png)
 <use images/esecuzione_app.png>
@@ -218,23 +223,56 @@ File: images/schema_sql.png Graphic file (type png)
 Package pdftex.def Info: images/schema_sql.png  used on input line 276.
 (pdftex.def)             Requested size: 310.4979pt x 425.99529pt.
  [13 <./images/esecuzione_app.png>] [14 <./images/schema_sql.png>] [15] (Relazione.aux)
+=======
+<images/game_info.png, id=82, 856.19875pt x 230.8625pt>
+File: images/game_info.png Graphic file (type png)
+<use images/game_info.png>
+Package pdftex.def Info: images/game_info.png  used on input line 265.
+(pdftex.def)             Requested size: 310.4979pt x 83.71985pt.
+<images/esecuzione_app.png, id=83, 265.99374pt x 67.25125pt>
+File: images/esecuzione_app.png Graphic file (type png)
+<use images/esecuzione_app.png>
+Package pdftex.def Info: images/esecuzione_app.png  used on input line 273.
+(pdftex.def)             Requested size: 310.4979pt x 78.5102pt.
+<images/schema_db.png, id=84, 457.71pt x 519.9425pt>
+File: images/schema_db.png Graphic file (type png)
+<use images/schema_db.png>
+Package pdftex.def Info: images/schema_db.png  used on input line 284.
+(pdftex.def)             Requested size: 310.4979pt x 352.73112pt.
+ [13 <./images/game_info.png> <./images/esecuzione_app.png>] [14 <./images/schema_db.png>] (Relazione.aux)
+>>>>>>> cambio_db
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-05-08>
  ***********
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  1525 strings out of 476247
  28941 string characters out of 2788098
  1937904 words of memory out of 3000000
  23768 multiletter control sequences out of 15000+600000
+=======
+ 1532 strings out of 476247
+ 29122 string characters out of 2788098
+ 1937904 words of memory out of 3000000
+ 23775 multiletter control sequences out of 15000+600000
+>>>>>>> cambio_db
  562659 words of font info for 51 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  57i,7n,65p,401b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<<<<<<< HEAD
 Output written on Relazione.pdf (15 pages, 1169874 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Output written on Relazione.pdf (14 pages, 1256174 bytes).
+PDF statistics:
+ 121 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> cambio_db
 

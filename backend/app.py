@@ -184,8 +184,18 @@ def save_data():
         # the username was already used
         return jsonify({'message': 'Error: {}'.format(str(e))})
 
-    
-
+#send  information about the games names and descriptions 
+@app.route("/api/info", methods=['GET'])
+def send_info():
+    try:
+        db = get_db()
+        cur = db.cursor()
+        # extract game name and description from db
+        cur.execute('SELECT game_id, game_name, game_description FROM Game')
+        games = cur.fetchall()
+        return jsonify([{"game_id": game[0], "game_name": game[1], "game_description": game[2]} for game in games])
+    except Exception as e:
+        return jsonify({'message': 'Error: {}'.format(str(e))})
 
 if __name__ == '__main__':
     app.run(debug=True)
