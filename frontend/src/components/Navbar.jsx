@@ -4,7 +4,7 @@ import "./Navbar.css"
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-const Navbar = ({username, setUsername}) => {
+const Navbar = () => {
 
   const location = useLocation();
     //delete the variables saved in local storage by the login function
@@ -13,19 +13,12 @@ const Navbar = ({username, setUsername}) => {
         localStorage.removeItem("password");
     }
 
-    // Retrieve username from localStorage when component mounts
-    useEffect(() => {
-      const savedUsername = localStorage.getItem('username');
-      if (savedUsername != "default") {
-        setUsername(savedUsername);
-      }
-    }, [username]);
 
   return (
     <div className="navbar">
       <div className="left-section">
         <div className="sectionPlayerName">
-            <p className="playerName">{username}</p>
+            <p className="playerName">{localStorage.getItem("username")}</p>
         </div>
         <div className="scoreboard-buttons">
           <Link to="/scoreboard/1"><button className="scoreboard-button gameButton">Scoreboard Snake</button></Link>

@@ -9,21 +9,17 @@ import Error from './Error';
 import { useState } from 'react';
 
 const App = () => {
-  //these variables are saved in the local memory and will be deleted once the user logs out or closes the browser
-  const [username, setUsername] = useState('default');
-  const [password, setPassword] = useState('default');
-
   //definition of the possible routes of the application
   return (
     <div>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} />}></Route>
-        <Route path='/Signin' element={<Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} />} ></Route>
-        <Route path="/Home" element={<SecondPage username={username} setUsername={setUsername}/>}></Route>
+        <Route path="/" element={<Login/>}></Route>
+        <Route path='/Signin' element={<Login/>} ></Route>
+        <Route path="/Home" element={<SecondPage/>}></Route>
         <Route path="/Snake" element={<SnakeGame/>}></Route>
         <Route path="/FlappyBird" element={<FlappyBird/>}></Route>
-        <Route path="/scoreboard/:variable" element={<Scoreboard username={username} setUsername={setUsername}/>}></Route>
+        <Route path="/scoreboard/:variable" element={<Scoreboard/>}></Route>
         <Route path='/*/*' element={<Error></Error>}></Route>
         </Routes>
       </BrowserRouter>

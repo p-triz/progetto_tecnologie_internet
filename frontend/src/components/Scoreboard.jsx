@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import "./Scoreboard.css";
 import axios from 'axios';
 
-const Scoreboard = ({username, setUsername}) => {
+const Scoreboard = () => {
   const [scores, setScores] = useState([]);
   const usernamePlayer = localStorage.getItem('username');
   const location = useLocation();
@@ -38,7 +38,7 @@ const Scoreboard = ({username, setUsername}) => {
 
   return (
     <div className="scoreboard">
-      <Navbar username={username} setUsername={setUsername}/>
+      <Navbar/>
       <div className="scoreboardContainer">
         <h2 className="scoreboardTitle">Scoreboard {gameName}</h2>
         <ul className="scoreboardList">

@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import './Card.css';
 
-const Card = ({ imageSrc,gameName, description, onClick }) => {
+const Card = ({ imageSrc,gameName, description }) => {
   return (
-    <div className="card" onClick={onClick}>
+    <div className="card">
       <img src={imageSrc} className="card-img-top" />
       <div className="card-body">
         <div>

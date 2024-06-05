@@ -12,11 +12,6 @@
 \maketitle
 \tableofcontents
 
-% frontend + flappy + fonti
-% backend + snake + dependency
-
-%ordine:
-%dependency -> front -> back -> fonti
 
 
 \section{Dependencies}
@@ -50,6 +45,79 @@ Passando invece alla cartella “backend” andiamo ad installare tramite termin
 
 \section{Frontend}
 
+\subsection{Componenti}
+il progetto è stato realizzato con il framework di React in quanto è tra i più utilizzati
+al mondo attualmente. Questo ci permette di scrivere meno codice definendo delle Componenti
+che poi verranno riutilizzate nelle varie pagine del sito web senza dover scrivere ulteriore codice.
+Sotto vengono presentate tutte le componenti React del progetto.
+
+\subsubsection{Card}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/Card.png}
+\end{figure}
+Questa componente è una semplice scheda utilizzata per indicare i giochi presenti nel sito, è composta da un semplice flexbox
+contenente degli elementi paragrafo per il nome e una semplice descrizione e un'immagine.
+successivamente questa componenente verrà racchiusa in un componenente link di React-Router-dom che sul click dell'utente 
+reindirizza alla pagina del gioco rappresentato. Card è presente solo nella pagina principale del sito.
+
+\subsubsection{Login}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/sign_in.png}
+\end{figure}
+Questa componente è la stessa sia per Login che per Sign in, è molto simile a Card in come si presenta,
+tuttavia ha una differenza sostanziale in termini di javascript. il bottone del componente è associato a una funzione chiamata 'handleLogin'
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/handleLogin.png}
+\end{figure}
+questa funzione raccoglie i dati inseriti dall'utente nel form e in base alla route, con cui si decide quale delle due versioni del componente utilizzare,
+li invia al backend per verificare le credenziali o per creare un nuovo account tramite le due funzioni 'sendDataSignIn' e 'sendDataLogIn' .
+come ultima cosa salva i valori inseriti dall'utente nella memoria locale del browser così che siano reperibili in qualunque momento, questi valori sono poi eliminati
+dalla funzione di logout in una componente successiva.
+
+Questa componente è montata solo nella pagina iniziale del sito
+
+
+\subsubsection{Navbar}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/Navbar.png}
+\end{figure}
+Navbar è una componente molto semplice, è composta solo da dei bottoni associati a dei link e uno associato alla funzione di logout prima citata.
+Presenta due stati possibili, quando la componente è montata nella pagina principale del sito ha solo due bottoni che collegano le pagine di classifica,
+mentre quando è montata in una pagina di classifica, si rende accessibile anche un bottone per ritornare alla pagina principale.
+Anche la funzione di logout è molto semplice in quanto elimina solamente i dati dell'utente dalla memoria locale.
+Navbar è presente nella pagina principale e nelle pagine di classifica.
+
+\subsubsection{Scoreboard}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/Scoreboard.png}
+\end{figure}
+Scoreboard è una componente che raccoglie i dati riguardanti un gioco specifico dal backend e li riordina in una lista da presentare all'utente 
+illuminando i risultati che lo interessano. L'unico aspetto interessante della componente è come ricava i dati da presentare.
+Questo viene fatto tramite Axios, un Client HTTP per node.js, che permette di inoltrare richieste HTTP e ricevere i dati in formato JSON.
+Scoreboard è presente solo nelle pagina di classifica.
+
+\subsection{Giochi}
+La sezione è dedicata a una analisi più approfondita del funzionamento del codice dei giochi.
+Non sono il focus del progetto, in quanto non utilizzano tecnologie particolari se non React.js. La sezione è mirata a facilitare la lettura del codice, se necessario.
+
+
+\subsubsection{Snake}
+
+\subsubsection{FlappyBird}
+Il gioco si basa essenzialmente sul generare degli ostacoli che devono essere evitati dal giocatore. 
+Gli ostacoli sono inseriti in una variabile di stato di React e sono renderizzati offscreen ogni 2 secondi.
+
+Innanzitutto si definiscono delle variabili di stato necessarie per il controllo del gioco.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/Flappy_variables.png}
+\end{figure}
 
 
 \section{Backend}
@@ -62,24 +130,24 @@ Passando invece alla cartella “backend” andiamo ad installare tramite termin
 \end{figure}
 
 \subsubsection{Import}
-Il nostro file inizia con l’import di tutte le librerie che andremo ad usare: lato server, per la crittografia e per il database.
+Il file inizia con l’import di tutte le librerie verranno utilizzate in seguito: lato server, per la crittografia e per il database.
 
-In particolare andiamo ad importare il framework Flask, scelto per la sua semplicità e minimalismo, inoltre andiamo ad importare tutte quelle librerie che ci servono per interagire con il client ricevendo ed inviando rispettivamente con “request" e "jsonify".
+In particolare viene importato il framework Flask, scelto per la sua semplicità e minimalismo, inoltre si importano tutte le librerie che servono per interagire con il client ricevendo ed inviando rispettivamente con “request" e "jsonify".
 
-La seconda sezione di import riguarda tutto ciò di cui abbiamo bisogno per il database: g è un oggetto che useremo per salvare, temporaneamente, e condividere i dati in parti differenti della nostra applicazione.
+La seconda sezione di import riguarda tutto il necessario per il database: g è un oggetto utilizzato per salvare, temporaneamente, e condividere i dati in parti differenti dell' applicazione.
 
 L’import del modulo os serve per gestire la posizione dei file, in particolare del database in questo caso.
 
-Come ultimo import in questa sezione abbiamo il modulo sqlite3, che ci consente di creare, inizializzare e utilizzare il nostro database.
+Come ultimo import in questa sezione si ha il modulo sqlite3, che consente di creare, inizializzare e utilizzare il database.
 
 
-Le utile due righe nella sezione di import servono per i moduli necessari rispettivamente alla creazione e al controllo dell’hash associati alla crittografia della password. 
+Le ultime due righe nella sezione di import servono per i moduli necessari rispettivamente alla creazione e al controllo dell’hash associati alla crittografia della password. 
 
 \subsubsection{Setup di base}
-Le prime due righe di codice servono ad inizializzare la nostra applicazione in flask e a configurare CORS (Cross-Origin Resource Sharing), quest'ultimo ci serve per consentire richieste da fonti esterne. 
+Le prime due righe di codice servono ad inizializzare l' applicazione in flask e a configurare CORS (Cross-Origin Resource Sharing), quest'ultimo serve per consentire richieste da fonti esterne. 
 L’asterisco associato al parametro origins specifica che le richieste possano avvenire da qualunque origine (dominio o indirizzo IP).
 
-L’ultima riga di questa sezione è quella che riguarda l’inizializzazione della chiave segreta che useremo per la crittografia della password.
+L’ultima riga di questa sezione è quella che riguarda l’inizializzazione della chiave segreta per la crittografia della password.
 
 \subsection{Setup Database}
 Questa sezione di codice, invece, è dedicata alla creazione, inizializzazione e chiusura del database sqlite3, già presente in Flask e ottimo per gestire carichi di lavoro moderati come in questo caso:
@@ -104,7 +172,7 @@ Questa funzione serve per stabilire una connessione con uno specifico database s
     \includegraphics[width=0.9\textwidth]{images/apertura_connessione_db.png}
 \end{figure}
 
-Funzione che ci permette, nel caso non fosse già presente, di instaurare una nuova connessione e memorizzarne il contenuto nell’oggetto g, permettendoci così di utilizzarla in diverse parti dell’applicazione.
+Funzione che permette, nel caso non fosse già presente, di instaurare una nuova connessione e memorizzarne il contenuto nell’oggetto g, permettendo così di utilizzarla in diverse parti dell’applicazione.
 
 \subsubsection{Chiusura della connessione}
 \begin{figure}[H]
@@ -120,8 +188,8 @@ Questa funzione invece serve per concludere la connessione con il database allor
     \includegraphics[width=0.9\textwidth]{images/inzializzazione_db.png}
 \end{figure}
 
-Questa funzione serve per inizializzare il database all’interno dell’applicazione Flask: prima si invoca la funzione get\textunderscore db in modo da ottenere la connessione con il database, poi andiamo ad aprire il file dello schema, in modalità lettura.
-Dopo aver ottenuto un oggetto cursos, andremo ad utilizzare tale oggetto per eseguire lo script che abbiamo letto nel file schema.sql; utilizziamo db.commit per confermare le modifiche appena fatte.
+Questa funzione serve per inizializzare il database all’interno dell’applicazione Flask: prima si invoca la funzione get\textunderscore db in modo da ottenere la connessione con il database, poi si apre il file dello schema, in modalità lettura.
+Dopo aver ottenuto un oggetto cursos, questo si utilizza per eseguire lo script letto nel file schema.sql; db.commit confermare le modifiche appena fatte.
 
 
 
@@ -131,14 +199,14 @@ Dopo aver ottenuto un oggetto cursos, andremo ad utilizzare tale oggetto per ese
     \includegraphics[width=0.9\textwidth]{images/inizializzazione_linea_comando.png}
 \end{figure}
 
-Quest’ultima porzione di codice, per quanto riguarda la sezione dedicata al database, ci permette di inizializzare il database tramite linea di comando “flask initdb”. 
-Una volta dato questo comando il nostro database sarà inizializzato e pronto per essere utilizzato.
+Quest’ultima porzione di codice, per quanto riguarda la sezione dedicata al database, permette di inizializzare il database tramite linea di comando “flask initdb”. 
+Una volta dato questo comando il database sarà inizializzato e pronto per essere utilizzato.
 
 Da tenere in considerazione che tutte le volte che questo comando viene lanciato il database sarà azzerato, perdendo tutti i dati al proprio interno.
 
 
 \subsection{API}
-Ora entriamo nella sezione dedicata alle API, funzioni che ci permettono di comunicare con il nostro client e nelle quali andremo ad utilizzare effettivamente il database che abbiamo creato nella porzione precedente di codice.
+Questa sezione è dedicata alle API, funzioni che permettono di comunicare con il client e nelle quali si utilizza effettivamente il database creato nella porzione precedente di codice.
 
 \subsubsection{Invio della classifica}
 \begin{figure}[H]
@@ -154,9 +222,9 @@ Questa funzione di tipo GET, che quindi invia dati dal server al client, serve p
 
 La richiesta del client avviene ad un url specifico che termina con un valore numero intero, tale valore numerico assume un valore differente per specificare di quale gioco si vuole ricevere i punteggi.
 
-Una volta che abbiamo identificato il gioco, tramite un semplice if statement, dobbiamo andare ad utilizzare le funzioni per instaurare la connessione con il database per poter effettuare la query ed estrarre le informazioni di cui abbiamo bisogno dal database.
+Una volta identificato il gioco, tramite un semplice if statement, si utilizzano le funzioni per instaurare la connessione con il database per poter effettuare la query ed estrarre le informazioni necessarie dal database.
 
-Salviamo tutte le tuple ottenute in una variavbile, tramite il metodo fetchll, che che ci consente di tenere tutti i risultati e non solo uno, e poi andiamo a creare una lista di json con i risultati ottenuti; lista che poi inviamo al client tramite apposito metodo.
+Tutte le tuple ottenute sono salvate in una variavbile, tramite il metodo fetchll, che che consente di tenere tutti i risultati e non solo uno, poi una lista di json viene creata con i risultati ottenuti; lista che poi sarà al client tramite apposito metodo.
 
 Il tutto viene fatto in regime di try catch per intercettare un qualunque errore che potrebbe avvenire e notificare di conseguenza il client.
 
@@ -177,10 +245,10 @@ Queste operazioni vengono tutte eseguite in regime di try catch in modo da inter
 \end{figure}
 
 Questa funzione serve per permettere l’accesso ad utente già registrato.
-La funzione riceve dal client il nome utente e la password inseriti: per prima cosa controlla che lo username esista, se esiste allora passiamo a controllare che anche la password, dopo aver usato l’apposita funzione per decriptarla, corrisponda.
+La funzione riceve dal client il nome utente e la password inseriti: per prima cosa controlla che lo username esista, se esiste allora controlla che anche la password, dopo aver usato l’apposita funzione per decriptarla, corrisponda.
 Il nome utente è univoco essendo chiave primaria nello schema sql, motivo per cui si usa la fatchone e non la fatchall.
 
-Al termine notifichiamo il client con il risultato che ottenuto dalla verifica.
+Al termine il client é notificato con il risultato ottenuto dalla verifica.
 
 \subsubsection{Iscrizione nuovo utente}
 \begin{figure}[H]
@@ -188,8 +256,8 @@ Al termine notifichiamo il client con il risultato che ottenuto dalla verifica.
     \includegraphics[width=0.9\textwidth]{images/iscrizione_nuovo_utente.png}
 \end{figure}
 
-L’ultima funzione che abbiamo è quella per permette ad un nuovo utente di iscriversi: riceviamo ancora una volta il nome utente e la password dal client, sempre in formato json, dopo di che andiamo ad aggiungere questi valori al database.
-L’unico errore che possiamo ottenere è che il nome utente sia già presente nel database, essendo chiave primaria non possono essere presenti due nomi utenti uguali, in tal caso andiamo a notificare il client che non siamo riusciti a performare l’operazione richiesta.
+L’ultima funzione è quella per permette ad un nuovo utente di iscriversi: riceve ancora una volta il nome utente e la password dal client in formato json, dopo di che aggiunge questi valori al database.
+L’unico errore che può verificarsi è che il nome utente sia già presente nel database, essendo chiave primaria non possono essere presenti due nomi utenti uguali, in tal caso il client è notificato che l’operazione richiesta non è andata a buon fine.
 
 \subsubsection{Sezione dedicare all'esecuzione dell'app (facoltativa)}
 \begin{figure}[H]
@@ -197,25 +265,25 @@ L’unico errore che possiamo ottenere è che il nome utente sia già presente n
     \includegraphics[width=0.9\textwidth]{images/esecuzione_app.png}
 \end{figure}
 
-Queste sono le due ultime righe del nostro backend e sono facoltative: ci servono solo per avviare la nostra applicazione e farlo con la modalità debug attiva.
+Queste sono le due ultime righe del backend e sono facoltative: ci servono solo per avviare la nostra applicazione e farlo con la modalità debug attiva.
 
 
 
 \subsection{Database}
-Il nostro database, fatto in sqlite3, ha una struttura relazionale e si basa su tre tabelle sql.
+Il database in sqlite3 ha una struttura relazionale e si basa su tre tabelle sql.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{images/schema_sql.png}
 \end{figure}
 
-Andiamo a creare 3 tabelle: User, Game e Matches.
+sono create 3 tabelle: User, Game e Matches.
 
-La tabella User è quella che andrà a contenere il nome utente e la password di ogni utente; essendo username chiave primaria questo evita che ci possano essere due utenti con lo stesso nome.
+La tabella User è quella che contiene il nome utente e la password di ogni utente; essendo username chiave primaria questo evita che ci possano essere due utenti con lo stesso nome.
 
 Game invece contiene l’id identificativo associato a ciascun gioco (1 per snake e 2 per flappy) e viene inizializzato direttamente con questi valori al suo interno quando viene creato il database.
 
-Matches è invece la tabella che si occupa di mettere in relazione le altre due: infatti contiene sia lo username che il game\textunderscore id, ma in aggiunta troviamo il match\textunderscore id, valore che identifica in modo univoco ogni partita giocata, e il punteggio ottenuto in tale partita. 
-Infine troviamo anche esplicitati i vincoli di integrità referenziale.
+Matches è invece la tabella che si occupa di mettere in relazione le altre due: infatti contiene sia lo username che il game\textunderscore id e in aggiunta il match\textunderscore id, valore che identifica in modo univoco ogni partita giocata, e il punteggio ottenuto in tale partita. 
+Infine sono esplicitati i vincoli di integrità referenziale.
 
 
 

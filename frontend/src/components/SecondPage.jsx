@@ -4,7 +4,7 @@ import './SecondPage.css';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
-const SecondPage = ({username, setUsername}) => {
+const SecondPage = () => {
   const imageSrc1 = '/images/snake.png';
   const imageSrc = '/images/flappy_bird.png'
   const description = 'Move your snake and let him eat apples';
@@ -16,7 +16,7 @@ const SecondPage = ({username, setUsername}) => {
     <div className="parentDiv">
       <div className="container">
        <div className='displayDiv'>
-        <Navbar username={username} setUsername={setUsername}></Navbar>
+        <Navbar></Navbar>
         <div className='cardsDiv'>
           <h1 className='title'>GAMES</h1>
           <div className='items'>

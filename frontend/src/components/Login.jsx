@@ -6,7 +6,7 @@ import "./Login.css"
 import axios from 'axios';
 
 
-const Login = ({ username, password, setUsername, setPassword}) => {
+const Login = () => {
   const navigate = useNavigate();
 
   //comunication with the backend to send the login information
@@ -41,8 +41,6 @@ const Login = ({ username, password, setUsername, setPassword}) => {
     event.preventDefault(); 
     const currUser = event.target.username.value;
     const currPassword = event.target.password.value;
-    setUsername(currUser);
-    setPassword(currPassword);
     location.pathname.endsWith("/") ? sendDataLogin(currUser, currPassword) : sendDataSignin(currUser, currPassword)
     localStorage.setItem("username", currUser);
     localStorage.setItem("password", currPassword);
