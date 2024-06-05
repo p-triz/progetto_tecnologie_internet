@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import "./Scoreboard.css";
 import axios from 'axios';
 
-const Scoreboard = () => {
+const Scoreboard = ({gameNames}) => {
   const [scores, setScores] = useState([]);
   const usernamePlayer = localStorage.getItem('username');
   const location = useLocation();
@@ -14,11 +14,11 @@ const Scoreboard = () => {
   //this is to load the correct scoreboard in each page
   useEffect(() => {
     if (location.pathname.endsWith("/1")) {
-      setGameName("Snake");
+      setGameName(gameNames[0]);
     } else {
-      setGameName("Flappy");
+      setGameName(gameNames[1]);
     }
-  }, [location.pathname]);
+  }, [location.pathname, gameNames]);
   
   //this gets the data from the database when the component is mounted
   useEffect(() => {
@@ -38,7 +38,7 @@ const Scoreboard = () => {
 
   return (
     <div className="scoreboard">
-      <Navbar/>
+      <Navbar gameNames={gameNames}></Navbar>
       <div className="scoreboardContainer">
         <h2 className="scoreboardTitle">Scoreboard {gameName}</h2>
         <ul className="scoreboardList">

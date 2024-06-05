@@ -9,7 +9,8 @@ CREATE TABLE User (
 
 CREATE TABLE Game (
   game_id INTEGER PRIMARY KEY,
-  game_name VARCHAR(30) NOT NULL
+  game_name VARCHAR(30) NOT NULL,
+  game_description VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Matches (
@@ -21,7 +22,7 @@ CREATE TABLE Matches (
   FOREIGN KEY (username) REFERENCES User(username)
 );
 
-INSERT INTO Game (game_id, game_name)
+INSERT INTO Game (game_id, game_name, game_description)
 VALUES
-    ('1', 'snake'),
-    ('2', 'flappy');
+    ('1', 'snake','Move your snake and let him eat apples'),
+    ('2', 'flappy','Make your bird fly avoiding obstacles');

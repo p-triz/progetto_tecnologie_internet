@@ -14,17 +14,18 @@
 \contentsline {section}{\numberline {3}Backend}{6}{}%
 \contentsline {subsection}{\numberline {3.1}Import e setup}{6}{}%
 \contentsline {subsubsection}{\numberline {3.1.1}Import}{6}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}Setup di base}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Setup di base}{7}{}%
 \contentsline {subsection}{\numberline {3.2}Setup Database}{7}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}Connessione con il database}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Connessione con il database}{8}{}%
 \contentsline {subsubsection}{\numberline {3.2.2}Aprire una nuova connessione con il database}{8}{}%
 \contentsline {subsubsection}{\numberline {3.2.3}Chiusura della connessione}{8}{}%
-\contentsline {subsubsection}{\numberline {3.2.4}Inizializzazione del database}{8}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Inizializzazione del database}{9}{}%
 \contentsline {subsubsection}{\numberline {3.2.5}Inizializzazione da linea di comando}{9}{}%
 \contentsline {subsection}{\numberline {3.3}API}{9}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Invio della classifica}{9}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Invio della classifica}{10}{}%
 \contentsline {subsubsection}{\numberline {3.3.2}Salvare il punteggio delle partite}{11}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Controllo accesso di un utente}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Controllo accesso di un utente}{12}{}%
 \contentsline {subsubsection}{\numberline {3.3.4}Iscrizione nuovo utente}{12}{}%
-\contentsline {subsubsection}{\numberline {3.3.5}Sezione dedicare all'esecuzione dell'app (facoltativa)}{12}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Invio informazioni giochi}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}Sezione dedicare all'esecuzione dell'app (facoltativa)}{13}{}%
 \contentsline {subsection}{\numberline {3.4}Database}{13}{}%

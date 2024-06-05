@@ -256,8 +256,16 @@ Al termine il client é notificato con il risultato ottenuto dalla verifica.
     \includegraphics[width=0.9\textwidth]{images/iscrizione_nuovo_utente.png}
 \end{figure}
 
-L’ultima funzione è quella per permette ad un nuovo utente di iscriversi: riceve ancora una volta il nome utente e la password dal client in formato json, dopo di che aggiunge questi valori al database.
+Questa funzione è quella per permette ad un nuovo utente di iscriversi: riceve ancora una volta il nome utente e la password dal client in formato json, dopo di che aggiunge questi valori al database.
 L’unico errore che può verificarsi è che il nome utente sia già presente nel database, essendo chiave primaria non possono essere presenti due nomi utenti uguali, in tal caso il client è notificato che l’operazione richiesta non è andata a buon fine.
+
+\subsubsection{Invio informazioni giochi}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/game_info.png}
+\end{figure}
+Quest'ultima funzione serve per inviare le informazioni relative ai giochi.
+Esegue una query per estrarre tutte le informazioni a disposizione nel datbase e poi le invia al client in formato JSON. 
 
 \subsubsection{Sezione dedicare all'esecuzione dell'app (facoltativa)}
 \begin{figure}[H]
@@ -273,14 +281,15 @@ Queste sono le due ultime righe del backend e sono facoltative: ci servono solo 
 Il database in sqlite3 ha una struttura relazionale e si basa su tre tabelle sql.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{images/schema_sql.png}
+    \includegraphics[width=0.9\textwidth]{images/schema_db.png}
 \end{figure}
 
 sono create 3 tabelle: User, Game e Matches.
 
 La tabella User è quella che contiene il nome utente e la password di ogni utente; essendo username chiave primaria questo evita che ci possano essere due utenti con lo stesso nome.
 
-Game invece contiene l’id identificativo associato a ciascun gioco (1 per snake e 2 per flappy) e viene inizializzato direttamente con questi valori al suo interno quando viene creato il database.
+Game invece contiene l’id identificativo associato a ciascun gioco (1 per snake e 2 per flappy), il nome del gioco e la sua descrizione. 
+Viene inizializzato direttamente con questi valori al suo interno quando viene creato il database.
 
 Matches è invece la tabella che si occupa di mettere in relazione le altre due: infatti contiene sia lo username che il game\textunderscore id e in aggiunta il match\textunderscore id, valore che identifica in modo univoco ogni partita giocata, e il punteggio ottenuto in tale partita. 
 Infine sono esplicitati i vincoli di integrità referenziale.
