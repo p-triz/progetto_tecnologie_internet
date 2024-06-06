@@ -118,9 +118,9 @@ l'obiettivo è muovere il serpente, tramite freccie direzionali, facendogli mang
 
 
 \paragraph{Codice che precede componenti:} 
-la prima parte del codice è dedicata ovviamente alla parte di import di tutte le librerie che andremo ad utilizzare; in aggiunta troviamo la pagina di stile associata a questo componente.
+la prima parte del codice è dedicata ovviamente alla parte di import di tutte le librerie che andremo ad utilizzare; in aggiunta la pagina di stile associata a questo componente.
 
-Subito sotto gli import troviamo la funzione che ci permette di andare a comunicare con il backend tramite metodo POST e di inviare i dati (nome utente, punteggio, id del gioco) ottenuti non appena una partita viene terminata.
+Subito sotto gli import si trova la funzione che permette di andare a comunicare con il backend tramite metodo POST e di inviare i dati (nome utente, punteggio, id del gioco) ottenuti non appena una partita viene terminata.
 
 
 \paragraph{Componente:}
@@ -150,7 +150,7 @@ La funzione “Move” è anche quella che :
     \item controlla se è avvenuta una collisione, invocando l’apposita funzione che si occuperà anche di terminare la partita
 \end{itemize}
 
-Successivamente troviamo i due useEffect, funzioni che vengono lanciate non appena il componente viene caricato: il primo è dedicato alla creazione del canvas e di tutte le sue proprietà.
+Successivamente i due useEffect, funzioni che vengono lanciate non appena il componente viene caricato: il primo è dedicato alla creazione del canvas e di tutte le sue proprietà.
 Si occupa anche di dare la possibilià all’utente di interagire con il gioco tramite un evento associato alla funzione per il ricevimento del tasto premuto.
 
 La seconda funzione, invece, si occupa di impostare un intervallo di tempo dopo il quale le funzioni “Move” e “Draw” vengono invocate in maniera ricorsiva.
@@ -167,10 +167,36 @@ Il gioco si basa essenzialmente sul generare degli ostacoli che devono essere ev
 Gli ostacoli sono inseriti in una variabile di stato di React e sono renderizzati offscreen ogni 2 secondi.
 
 Innanzitutto si definiscono delle variabili di stato necessarie per il controllo del gioco.
+queste definiscono la posizione di spawn del giocatore, l'array di ostacoli e lo stato generale del gioco, come gameover per esempio.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{images/Flappy_variables.png}
 \end{figure}
+
+le funzioni come 'sendData' e 'restartGame' sono autoesplicative, una invia i dati della partita al backend mentre l'altra reinizializza lo stato del gioco
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/jump.png}
+\end{figure}
+
+la funzione jump è associata all'evento click dell'utente, inizia il ciclo di gioco e modifica la posizione del giocatore ad ogni chiamata.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/checkCollision.png}
+\end{figure}
+questa è la funzione principale del gioco, controlla che il giocatore non stia collidendo con i limiti dell'area di gioco o con un ostacolo. inoltre aggiorna il punteggio
+nel caso l'ostacolo sia stato superato, per stabilire ciò controlla che l'hitbox del giocatore abbia superato quello dell'ostacolo.
+La funzione è associata ad un useEffect, perciò è eseguita costantemente mentre il componente è montato.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/useEffect.png}
+\end{figure}
+
+Questo useEffect è il più importante, definisce tutti gli intervalli che muovono i componenti del gioco, come il giocatore con la gravità e gli ostacoli. La definizione di intervalli in questo modo
+indica al browser di chiamare la funzione così definita ogni tot millisecondi, in questo caso è come se fosse il 'framerate'.
 
 
 \section{Backend}
@@ -346,6 +372,16 @@ Viene inizializzato direttamente con questi valori al suo interno quando viene c
 
 Matches è invece la tabella che si occupa di mettere in relazione le altre due: infatti contiene sia lo username che il game\textunderscore id e in aggiunta il match\textunderscore id, valore che identifica in modo univoco ogni partita giocata, e il punteggio ottenuto in tale partita. 
 Infine sono esplicitati i vincoli di integrità referenziale.
+
+\section{Fonti}
+\begin{itemize}
+    \item flask documentation: https://flask.palletsprojects.com/en/3.0.x/
+    \item React.js documentation: https://react.dev
+    \item Axios documentation: https://axios-http.com/docs/intro
+    \item Flappy bird example: https://www.geeksforgeeks.org/flappy-bird-game-using-react-js/
+    \item slide del corso.
+    \item  
+\end{itemize}
 
 
 

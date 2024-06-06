@@ -82,7 +82,6 @@ const FlappyBird = () => {
                 }
             }
         });
- 
         // Check if bird is out of the screen vertically
         if (birdBottom > 800 || birdTop < -170) {
             setGameOver(true);
