@@ -1,6 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1717616941.33236 "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" "Relazione.pdf" "Relazione" 1717616942.59561 0
-  "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" 1717616587.14736 15064 b0e006915eb36f1de55bfbbee15f29a8 ""
+["pdflatex"] 1717678198.78235 "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" "Relazione.pdf" "Relazione" 1717678200.17857 0
+  "../frontend/public/images/snake.png" 1716489798.48738 3773 fb46d49c73a9a6ac274734ea848a3b7b ""
+  "/Users/francescovescovi/Documents/GitHub/progetto_tecnologie_internet/Relazione/Relazione.tex" 1717678198.29339 18369 8eacafb8f12bb5c8427d635d4be3bfbc ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1717514596.72303 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1717518088.99646 11548 146df9a3d1b5c2499b1cfad9917472e9 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1716888765.24536 21067800 1e681e4742d08cfeaa7cc24e5283844a ""
@@ -35,9 +36,9 @@
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty" 1716888062.56523 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1716888062.56653 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "/Users/francescovescovi/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1716888063.84213 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
-  "Relazione.aux" 1717616942.52893 3588 2637fe1c7a12eb038a1639aaa034f463 "pdflatex"
-  "Relazione.tex" 1717616587.14736 15064 b0e006915eb36f1de55bfbbee15f29a8 ""
-  "Relazione.toc" 1717616942.52994 2284 0553de567a1f4bab672e34b3640c0a1a "pdflatex"
+  "Relazione.aux" 1717678200.10839 3875 86c2447856454c6803420325d4e645fe "pdflatex"
+  "Relazione.tex" 1717678198.29339 18369 8eacafb8f12bb5c8427d635d4be3bfbc ""
+  "Relazione.toc" 1717678200.10947 2448 9ce35f49db6dffe9fa4f0cc8de0deba6 "pdflatex"
   "images/Card.png" 1717607406.48905 45887 13004302c9e10dbe225bbbfcedb69530 ""
   "images/Flappy_variables.png" 1717607406.48941 91144 37e6576fb20dac1e8af106bcdcb12e65 ""
   "images/Navbar.png" 1717607406.48962 40764 e22e0182d4b02b742cec428c1351ab1e ""
@@ -59,6 +60,8 @@
   "images/schema_db.png" 1717616587.14869 193938 7fc1297b0c8e633ae42013bdaa866959 ""
   "images/setup_database1.png" 1717515781.38334 85864 950fe03d37a40dfc763c3479dd911ae1 ""
   "images/sign_in.png" 1717607406.49044 49239 339a2afe5aebba1db375804139a07fef ""
+  "images/snake_move1.png" 1717677263.78909 95297 a1e4447de8d8e5374f56bc51de3ceefe ""
+  "images/snake_move2.png" 1717677263.79871 181021 bee7ead9f6b407aef70bb8d18c633a07 ""
   (generated)
   "Relazione.aux"
   "Relazione.log"

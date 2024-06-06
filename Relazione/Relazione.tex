@@ -108,6 +108,59 @@ Non sono il focus del progetto, in quanto non utilizzano tecnologie particolari 
 
 
 \subsubsection{Snake}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{../frontend/public/images/snake.png}
+\end{figure}
+
+\paragraph{Come funziona:}
+l'obiettivo è muovere il serpente, tramite freccie direzionali, facendogli mangiare più mele possibili ed evitando di avere collisioni contro i bordi e contro se stesso.
+
+
+\paragraph{Codice che precede componenti:} 
+la prima parte del codice è dedicata ovviamente alla parte di import di tutte le librerie che andremo ad utilizzare; in aggiunta troviamo la pagina di stile associata a questo componente.
+
+Subito sotto gli import troviamo la funzione che ci permette di andare a comunicare con il backend tramite metodo POST e di inviare i dati (nome utente, punteggio, id del gioco) ottenuti non appena una partita viene terminata.
+
+
+\paragraph{Componente:}
+Il componente inizia andando ad impostare quelle che sono le variabili di stato che ci servono, ad esempio troviamo: posizione e dimensione del serpente, la direzione, la posizione delle mele, il punteggio e lo stato del gioco. 
+
+Successivamente troviamo altre variabili funzionali al corretto andamento del gioco e non solo: infatti troviamo la variabile che intercetta il nome utente e quelle riferite al canvas (luogo dove il gioco sarà effettivamente visibile).
+
+La funzione “draw” si occupa di disegnare il canvas e di colorare, a seconda del tipo rappresentato, la singola cella.
+
+La funzione “Move” si occupa di muovere il serpente utilizzando le sue cordinate.
+Le modifiche alla direzione inserita dall’utente vengono fatte tramite la funzione “handeKeyDown” che aggiorna lo stato della variabile “direction”.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/snake_move1.png}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/snake_move2.png}
+\end{figure}
+
+La funzione “Move” è anche quella che :
+\begin{itemize}
+    \item modificare la posizione del serpente, aggiornando il suo stato tramite un array
+    \item controlla se il serpente ha mangiato una mela e incrementa il punteggio di conseguenza
+    \item genera una nuova posizione per la mela, verificando al contempo che sia una posizione valida e a quel punto aggiorna lo stato della mela
+    \item controlla se è avvenuta una collisione, invocando l’apposita funzione che si occuperà anche di terminare la partita
+\end{itemize}
+
+Successivamente troviamo i due useEffect, funzioni che vengono lanciate non appena il componente viene caricato: il primo è dedicato alla creazione del canvas e di tutte le sue proprietà.
+Si occupa anche di dare la possibilià all’utente di interagire con il gioco tramite un evento associato alla funzione per il ricevimento del tasto premuto.
+
+La seconda funzione, invece, si occupa di impostare un intervallo di tempo dopo il quale le funzioni “Move” e “Draw” vengono invocate in maniera ricorsiva.
+Il procedimento viene ripetuto fino a quando il componente non viene dismesso.
+
+La funzione “handlePlayAgain” si occupa di permettere cominciare una nuova partita.
+
+L’ultima parte del componente è dedicato alla creazione: della struttura HTML, dello spazio dedicato al canvas, ai bottoni di interazione e al mostrare il punteggio al giocatore terminata la partita.
+
+
 
 \subsubsection{FlappyBird}
 Il gioco si basa essenzialmente sul generare degli ostacoli che devono essere evitati dal giocatore. 
